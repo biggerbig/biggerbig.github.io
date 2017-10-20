@@ -6,7 +6,17 @@
             "src": "/img/icon.png",
             "type": "image/png",
             "sizes": "48x48"
-        }
+        },
+        {
+            "src": "/img/icon.png",
+            "type": "image/png",
+            "sizes": "96x96"
+    },
+        {
+            "src": "/img/icon.png",
+            "type": "image/png",
+            "sizes": "192x192"
+    }
   ],
     "start_url": "/",
     "display": "standalone",
