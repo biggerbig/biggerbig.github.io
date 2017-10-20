@@ -1,6 +1,6 @@
 {
-    "short_name": "AirHorner",
-    "name": "Kinlan's AirHorner of Infamy",
+    "short_name": "DOPEHOTZ",
+    "name": "DOPEHOTZ Squad",
     "icons": [
         {
             "src": "/img/icon.png",
@@ -18,7 +18,7 @@
             "sizes": "192x192"
     }
   ],
-    "start_url": "https://biggerbig.github.io/",
+    "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#242425",
     "orientation": "any",
