@@ -1,0 +1,64 @@
+@media only screen and (max-width: 1120px) {
+    body {
+        padding: 40px 0 20px 0;
+    }
+    .page_container {
+        width: 100%;
+        margin: 0px;
+    }
+    #inner_body {
+        position: relative;
+        padding-bottom: 20px;
+    }
+    #header {
+        display: none;
+    }
+    #header_m {
+        display: block;
+    }
+    .floating_player{
+        height: 60px;
+    }
+    .float_player_artwork {
+        width: 60px;
+        height: 60px;
+    }
+    .prev_btn {
+        height: 60px;
+        width: 30px;
+        background-size: 15px;
+    }
+    .play_btn{
+        height: 60px;
+        width: 30px;
+        background-size: 20px;
+    }
+    .next_btn {
+        height: 60px;
+        width: 30px;
+        background-size: 15px;
+    }
+    .close_btn {
+        height: 60px;
+        width: 40px;
+        background-size: 10px;
+    }
+    .sub_title {
+        font-size: 14px;
+    }
+    .main_carousel {
+        height: 300px;
+    }
+    .n_stage_week {
+        font-size: 12px;
+    }
+    .main_openmic_con_wrap ul li{
+    width: 50%;
+}
+}
+
+@media only screen and (max-width: 600px) {
+    .main_openmic_con_wrap ul li{
+    width: 100%;
+}
+}

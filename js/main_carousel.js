@@ -1,0 +1,11 @@
+$('.top_carousel').owlCarousel({
+    margin:15,
+    loop:true,
+    autoWidth:true,
+    items:10,
+    center:true,
+	autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true,
+    URLhashListener:false
+});
