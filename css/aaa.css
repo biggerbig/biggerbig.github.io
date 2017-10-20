@@ -1,0 +1,1512 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-size: 13px;
+    -webkit-text-size-adjust: none;
+    /*    font-family: 'NanumSquare', sans-serif;*/
+    font-family: 'Noto Sans KR', sans-serif;
+    outline: none;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    position: inherit;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    background-color: #242425;
+    position: relative;
+    box-sizing: border-box;
+    min-height: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 60px 0 20px 0;
+}
+
+body.bottom {
+    padding-bottom: 20px;
+}
+
+body.open {
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+}
+
+html.detail-open {
+    overflow: hidden;
+}
+
+img {
+    border: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    /* 네이티브 외형 감추기 */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+/* IE 10, 11의 네이티브 화살표 숨기기 */
+
+select::-ms-expand {
+    display: none;
+}
+
+.page_width {
+    min-height: 100%;
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#footer {
+    width: 100%;
+    height: 20px;
+}
+
+#footer.open {
+    margin-bottom: 60px;
+}
+
+#footer p {
+    width: 100%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 10px;
+    background-color: #1a1a1a;
+    color: #666;
+}
+
+
+/* 토스트 알럿 */
+
+.dope_alert {
+    display: block;
+    position: fixed;
+    z-index: 2000;
+    bottom: 60px;
+    width: 100%;
+    text-align: center;
+}
+
+.dope_alert p {
+    width: 300px;
+    height: 30px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    line-height: 30px;
+    opacity: 0;
+    -webkit-animation: 'alert' 2.0s ease-out forwards;
+    animation: 'alert' 2.0s ease-out forwards
+}
+
+@-webkit-keyframes alert {
+    0% {
+        opacity: .7;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes alert {
+    0% {
+        opacity: .7;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* PC 버전 헤더 */
+
+#header {
+    width: 100%;
+    height: 60px;
+    background-color: #242425;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 8;
+    transition: All 0.2s ease-out;
+    -webkit-transition: All 0.2s ease-out;
+    -moz-transition: All 0.2s ease-out;
+    -o-transition: All 0.2s ease-out;
+    box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.08);
+}
+
+.header_width {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    line-height: 60px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(/img/main_logo.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: 15px;
+    width: 80px;
+}
+
+.menu_list_wrap {
+    display: block;
+    font-size: 0px;
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+}
+
+.menu_list_wrap li {
+    display: inline-block;
+}
+
+.menu_list_wrap li a {
+    display: inline-block;
+    line-height: 60px;
+    font-size: 16px;
+    color: #fff;
+    width: 130px;
+    letter-spacing: 0px;
+    cursor: pointer;
+    transition: All 0.2s ease-out;
+    -webkit-transition: All 0.2s ease-out;
+    -moz-transition: All 0.2s ease-out;
+    -o-transition: All 0.2s ease-out;
+}
+
+.menu_list_wrap li:hover a {
+    color: #FF3636;
+    letter-spacing: 1px;
+}
+
+.search_btn {
+    width: 60px;
+    height: 60px;
+    background-image: url(/img/search-btn.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 120px;
+}
+
+.btn_wrap_r {
+    cursor: pointer;
+    width: 120px;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    height: 60px;
+    font-size: 0px;
+}
+
+.profile_btn {
+    font-size: 0px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.login_btn {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+}
+
+.login_btn>a {
+    font-size: 16px;
+    color: #fff;
+    line-height: 36px;
+    vertical-align: top;
+    display: inline-block;
+    line-height: 60px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #2a2a2a;
+}
+
+.profile_img {
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.user_name_h {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    color: #fff;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.user_menu_btn {
+    width: 10px;
+    height: 10px;
+    margin-left: 8px;
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: All 0.4s ease-out;
+    -webkit-transition: All 0.4s ease-out;
+    -moz-transition: All 0.4s ease-out;
+    -o-transition: All 0.4s ease-out;
+}
+
+.user_menu_btn.open {
+    -ms-transform: rotate(540deg);
+    -webkit-transform: rotate(540deg);
+    transform: rotate(540deg);
+}
+
+.toggle_menu_h {
+    width: 120px;
+    height: 0px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 7;
+    right: 0px;
+    top: 60px;
+    background-color: #393939;
+    box-sizing: border-box;
+    transition: All 0.1s ease-out;
+    -webkit-transition: All 0.1s ease-out;
+    -moz-transition: All 0.1s ease-out;
+    -o-transition: All 0.1s ease-out;
+}
+
+.toggle_menu_h.open {
+    height: 205px;
+}
+
+.toggle_menu_h li:hover>a {
+    color: #FF3636;
+}
+
+.toggle_menu_h li>a {
+    padding: 5px 15px;
+    color: #fff;
+    font-size: 14px;
+    display: block;
+    transition: All 0.2s ease-out;
+    -webkit-transition: All 0.2s ease-out;
+    -moz-transition: All 0.2s ease-out;
+    -o-transition: All 0.2s ease-out;
+}
+
+.toggle_menu_sub {
+    font-size: 12px;
+    display: block;
+    color: #999;
+    padding: 4px 19px;
+}
+
+
+/* 모바일 헤더 */
+
+.logo_m {
+    height: 40px;
+    background-image: url(/img/main_logo.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: 10px;
+    width: 60px;
+    display: inline-block;
+}
+
+#header_m {
+    width: 100%;
+    height: 40px;
+    background-color: #242425;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 8;
+    text-align: center;
+    display: none;
+    transition: All 0.2s ease-out;
+    -webkit-transition: All 0.2s ease-out;
+    -moz-transition: All 0.2s ease-out;
+    -o-transition: All 0.2s ease-out;
+    box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.08);
+}
+
+.menu_btn_m {
+    width: 40px;
+    height: 40px;
+    background-image: url(/img/menu-btn.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.search_btn_m {
+    width: 40px;
+    height: 40px;
+    background-image: url(/img/search-btn.png);
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: block;
+}
+
+.menu_m {
+    width: 140px;
+    position: fixed;
+    top: 0px;
+    left: -140px;
+    height: 100%;
+    background-color: #1a1a1a;
+    z-index: 9;
+    transition: All 0.2s ease-out;
+    -webkit-transition: All 0.2s ease-out;
+    -moz-transition: All 0.2s ease-out;
+    -o-transition: All 0.2s ease-out;
+}
+
+.menu_m.open {
+    left: 0px;
+}
+
+.menu_list_m {
+    padding: 100px 0 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.menu_list_m li>a {
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.menu_spacer {
+    width: 100%;
+    height: 20px;
+}
+
+.profile_m {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+}
+
+.profile_logon_m {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.profile_logoff_m {
+    width: 100%;
+    height: 100%;
+}
+
+.profile_logoff_m a {
+    display: block;
+    line-height: 80px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+
+.profile_logon_m a {
+    color: #fff;
+    line-height: 80px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.page_wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+    z-index: 8;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.page_wrap.open {
+    display: block;
+}
+
+
+/* 플로팅 플레이어 */
+
+
+/*
+.floating_player {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background-color: #1a1a1a;
+    display: none;
+}
+
+.float_player_artwork {
+    width: 80px;
+    height: 80px;
+    box-sizing: border-box;
+    background-size: cover;
+}
+
+.player_l {
+    float: left;
+}
+
+.player_r {
+    float: right;
+}
+
+.prev_btn {
+    width: 40px;
+    height: 80px;
+    background-image: url(/img/back-trk.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.play_btn {
+    width: 60px;
+    height: 80px;
+    background-image: url(/img/play.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.ctrl_btn_wrap {
+    font-size: 0px;
+}
+
+.next_btn {
+    width: 40px;
+    height: 80px;
+    background-image: url(/img/next-trk.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.close_btn {
+    width: 80px;
+    height: 80px;
+    background-image: url(/img/close-btn.png);
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+*/
+
+
+/* 메인 콘텐츠 */
+
+.sub_title {
+    color: #fff;
+    font-size: 20px;
+    padding: 30px 20px 10px 20px;
+    display: block;
+    width: 1100px;
+    margin: 0 auto;
+    font-weight: 400;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.main_carousel {
+    width: 100%;
+    height: 310px;
+    box-sizing: border-box;
+    background-color: #1a1a1a;
+}
+
+.top_carousel {
+    display: block;
+    white-space: nowrap;
+}
+
+.top_carousel_item {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+.top_carousel_item>img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel_track_info {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    white-space: nowrap;
+}
+
+.carousel_track_info>p {}
+
+.carousel_track_title {
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px 10px 0 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.carousel_track_artist {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0px 10px 10px 10px;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+.top_carousel_play {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.play_btn_img {
+    max-width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.main_content {}
+
+.n_stage_week {
+    margin-left: 10px;
+    color: #c9c9c9;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.onstage_con_wrap {
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.onstage_con {
+    width: 100%;
+    height: 60px;
+    background-color: #1a1a1a;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.onstage_con img {
+    width: 50px;
+    padding: 5px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.subject_wrap {
+    width: 100%;
+    padding: 9px 130px 0 70px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.subject_title {
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.subject_artist {
+    width: 100%;
+    color: #999;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.onstage_con_playtime {
+    width: 50px;
+    height: 60px;
+    position: absolute;
+    top: 0px;
+    right: 60px;
+    color: #999;
+    text-align: center;
+    line-height: 60px;
+}
+
+.onstage_con_play {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-image: url(/img/play.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.main_spacer {
+    background-color: #1a1a1a;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.main_spacer p {
+    text-align: center;
+    color: #c9c9c9;
+    font-size: 14px;
+}
+
+.main_spacer h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+}
+
+.main_spacer a {
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    padding: 5px 12px;
+    border-radius: 5px;
+    background-color: #FF3636;
+    margin-top: 20px;
+}
+
+.openmic {
+    margin-bottom: 30px;
+}
+
+.openmic_con_wrap>ul {
+    font-size: 0px;
+    padding: 10px;
+    padding-top: 0px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.openmic_con_wrap>ul>li {
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.opm_thumb {
+    width: 100%;
+    padding-top: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.opm_info {
+    background-color: #1a1a1a;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    position: relative;
+    /*    border-bottom: 1px solid #2a2a2a;*/
+}
+
+.opm_info p {
+    color: #999;
+    font-size: 12px;
+    width: 100%;
+    padding-right: 38px;
+    box-sizing: border-box;
+    padding-left: 58px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.opm_info h4 {
+    color: #c9c9c9;
+    font-weight: normal;
+    font-size: 14px;
+    width: 100%;
+    padding-right: 38px;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-top: 5px;
+}
+
+.opm_play {
+    width: 63px;
+    height: 63px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(/img/play.png);
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.opm_content {
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.opm_content p {
+    color: #999;
+    word-break: keep-all;
+    overflow: hidden;
+    height: 133px;
+}
+
+.opm_profile_img {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: -25px;
+    left: auto;
+}
+
+.opm_feedback {
+    height: 30px;
+    background-color: #1a1a1a;
+    font-size: 0px;
+}
+
+.opm_feedback span {
+    width: 33.33%;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.opm_feedback span a {
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    color: #999;
+    font-size: 10px;
+    padding-left: 5px;
+}
+
+.dope_btn p {
+    background-image: url(/img/dope_icon_set.png);
+    background-size: auto 13px;
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    background-position: right;
+}
+
+.dope_btn.fill p {
+    background-image: url(/img/dope_icon_set.png);
+    background-size: auto 13px;
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    background-position: left;
+}
+
+.clip_btn p {
+    background-image: url(/img/clip_icon_set.png);
+    background-size: auto 13px;
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    background-position: right;
+}
+
+.clip_btn.fill p {
+    background-image: url(/img/clip_icon_set.png);
+    background-size: auto 13px;
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    background-position: left;
+}
+
+.comnt_btn p {
+    background-image: url(/img/cmnt-icon.png);
+    background-size: auto 13px;
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    background-position: right;
+}
+
+
+/* 카로셀 공통 CSS */
+
+
+/* 
+ *  Owl Carousel - Animate Plugin
+ */
+
+.owl-carousel .animated {
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* 
+ * 	Owl Carousel - Auto Height Plugin
+ */
+
+.owl-height {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+
+/* 
+ *  Core Owl Carousel CSS File
+ */
+
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-controls .owl-nav .owl-prev,
+.owl-carousel .owl-controls .owl-nav .owl-next,
+.owl-carousel .owl-controls .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block;
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0;
+}
+
+.owl-carousel .owl-refresh .owl-item {
+    display: none;
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+}
+
+.owl-carousel.owl-text-select-on .owl-item {
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+}
+
+.owl-carousel .owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+
+/* No Js */
+
+.no-js .owl-carousel {
+    display: block;
+}
+
+
+/* 
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+}
+
+
+/* 
+ * 	Owl Carousel - Video Plugin
+ */
+
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url("owl.video.play.png") no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: scale 100ms ease;
+    -moz-transition: scale 100ms ease;
+    -ms-transition: scale 100ms ease;
+    -o-transition: scale 100ms ease;
+    transition: scale 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+    -webkit-transition: scale(1.3, 1.3);
+    -moz-transition: scale(1.3, 1.3);
+    -ms-transition: scale(1.3, 1.3);
+    -o-transition: scale(1.3, 1.3);
+    transition: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn,
+.owl-carousel .owl-video-playing .owl-video-play-icon {
+    display: none;
+}
+
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+}
+
+.sc_widget {
+    display: none;
+}
+
+.float_player_wrap {
+    width: 100%;
+    height: 50px;
+    background-color: #1a1a1a;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+}
+
+.progress {
+    user-select: none;
+    cursor: pointer;
+    clear: both;
+    overflow: hidden;
+    position: absolute;
+    top: -10px;
+    height: 10px;
+    width: 100%;
+    background: #333;
+}
+
+.progress .progress_bar {
+    height: 100%;
+    width: 0%;
+    background: #FF3636;
+}
+
+.float_artwork {
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.float_info {
+    width: 100%;
+    padding-left: 65px;
+    padding-right: 120px;
+    box-sizing: border-box;
+    padding-top: 4px;
+}
+
+.flost_artist {
+    font-size: 12px;
+    width: 100%;
+    color: #999;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.float_title {
+    font-size: 16px;
+    width: 100%;
+    color: #c9c9c9;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.play {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    background-position: center;
+    background-size: 30px;
+    background-repeat: no-repeat;
+}
+
+.play.now {
+    background-image: url(/img/play.png);
+}
+
+.play.pause {
+    background-image: url(/img/pause.png);
+}
+
+.float_player_close_btn {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(/img/close-btn.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* 리스트 페이지 */
+
+.sub_main {
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sub_main h2 {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.sub_main p {
+    font-size: 16px;
+    text-align: center;
+    color: #FF3636;
+}
+
+.sub_main a {
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    padding: 5px 12px;
+    border-radius: 5px;
+    background-color: #FF3636;
+    margin-top: 20px;
+}
+
+
+/* 디테일 페이지 */
+
+.detail_top {
+    width: 100%;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    background-color: #1a1a1a
+}
+
+.top_artwork_wrap {
+    padding: 80px 0 60px 0;
+    /*    background-color: rgba(0,0,0,0.7);*/
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.top_artwork {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.feedback_box {
+    background-color: #393939;
+    height: 50px;
+}
+
+.detail_feedback {
+    font-size: 0px;
+    width: 250px;
+    padding:5px 0;
+}
+
+.detail_feedback span {
+    width: 33.33%;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.detail_feedback span a {
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    color: #999;
+    font-size: 10px;
+    padding-left: 5px;
+}
+
+.top_track_info {
+    text-align: center;
+}
+
+.top_track_info h5 {
+    color: #999;
+    margin-top: 15px;
+}
+
+.top_track_info p {
+    color: #666;
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+
+.detail_author_wrap_inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.detail_author {
+    line-height: 40px;
+    padding-left: 10px;
+    color: #999;
+    font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    padding-right: 60px;
+    padding-left: 70px;
+}
+
+.detail_profile_img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.title_wrap {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.title_wrap_inner {
+    max-width: 1100px;
+    margin: 0 auto;    
+}
+
+
+.detail_title {
+    padding: 30px 20px 10px 20px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 500;
+    font-family: 'Jeju Gothic', sans-serif;
+}
+
+.detail_postdate {
+    font-size: 12px;
+    color: #666;
+    font-family: 'Jeju Gothic', sans-serif;
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+
+
+
+.detail_body {
+    padding: 20px;
+}
+
+.detail_body > div > * {
+    font-size: 16px;
+    color: #999;
+    line-height: 28.8px;
+    font-weight: 300;
+    font-family: 'Jeju Gothic', sans-serif;
+}
+
+.top_artwork_play {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.open_lyrics {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+}
+
+
+.author_follow {
+    width: 60px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #FF3636;
+    border-radius: 5px;
+    padding: 3px;
+    box-sizing: border-box;
+    color: #FF3636;
+    font-weight: 100;
+    font-size: 12px;
+    position: absolute;
+    right: 20px;
+    top: 17px;
+}
+
+

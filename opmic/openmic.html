@@ -5,18 +5,14 @@
     <meta name="theme-color" content="#242425" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="DOPEHOTZ">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <title>DOPEHOTZ</title>
     <link rel="icon" sizes="192x192" href="/icon.png" />
-    <link rel="apple-touch-icon" href="/icon.png">
-    <meta name="msapplication-TileImage" content="icon.png">
-    <meta name="msapplication-TileColor" content="#2F3BA2">
     <link href="/css/base.css" rel="stylesheet" type="text/css" />
     <link href="/css/case.css" rel="stylesheet" type="text/css" />
     <link href="/css/carousel.css" rel="stylesheet" type="text/css" />
-    <link rel="manifest" href="/manifest.json">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 </head>
 
 <body>
@@ -29,10 +25,9 @@
                 <div class="logo"></div>
             </a>
             <ul class="menu_list_wrap">
-                <li><a href="/onstage/onstage.html">ON STAGE</a></li>
-                <li><a href="/opmic/openmic.html">OPEN MIC</a></li>
+                <li><a href="/">ON STAGE</a></li>
+                <li><a href="/">OPEN MIC</a></li>
                 <li><a href="/">MIXTAPE</a></li>
-                <li><a href="/">SHOUT OUT</a></li>
             </ul>
             <a href="#" class="search_btn"></a>
             <div class="btn_wrap_r">
@@ -48,7 +43,7 @@
 
             <div class="toggle_menu_h">
                 <ul>
-                    <li><a href="/user/profile.html">PROFILE</a></li>
+                    <li><a href="/">PROFILE</a></li>
                     <li><a href="/">POST TRACK</a></li>
                     <li><a href="/">CLIP BOARD<span></span></a></li>
                     <li>
@@ -77,7 +72,7 @@
     <div class="menu_m">
         <div class="profile_m">
             <div class="profile_logon_m" style="background-image:url(https://i1.sndcdn.com/artworks-qz6zfZHjQx46-0-t200x200.jpg)">
-                <a href="/user/profile.html">Travis Scott</a>
+                <a href="/">Travis Scott</a>
             </div>
 
             <!--
@@ -92,10 +87,9 @@
             <li><a href="/">CLIP BOARD</a></li>
             <li class="menu_spacer"></li>
             <li><a href="/">HOME</a></li>
-            <li><a href="/onstage/onstage.html">ON STAGE</a></li>
-            <li><a href="/opmic/openmic.html">OPEN MIC</a></li>
+            <li><a href="/">ON STAGE</a></li>
+            <li><a href="/">OPEN MIC</a></li>
             <li><a href="/">MIXTAPE</a></li>
-            <li><a href="/">SHOUT OUT</a></li>
             <li><a>HELP</a>
                 <div>
                     <a class="toggle_menu_sub" href="/">의견보내기</a>
@@ -107,257 +101,15 @@
         </ul>
     </div>
 
-    <!-- 토스트 알럿 -->
-    <div class="dope_alert" style="display:none;">
-        <p>감사합니다.</p>
-    </div>
-    <!-- -- -->
-
     <div id="container">
-
-        <div class="main_carousel">
-            <h2 class="sub_title">NEW STAGE</h2>
-            <ul class="top_carousel">
-                <li class="top_carousel_item">
-                    <img src="https://i1.sndcdn.com/artworks-000228064117-w6cmmr-t500x500.jpg">
-                    <a href="#" class="carousel_track_info">
-                        <p class="carousel_track_title">Confidence w/ Neguim</p>
-                        <p class="carousel_track_artist">RIVR</p>
-                    </a>
-                    <div class="top_carousel_play play_trigger" data-tracknum="288681063">
-                        <img class="play_btn_img" src="/img/play.png">
-                    </div>
-                </li>
-                <!-- ---------------------------------------------------------- -->
-                <li class="top_carousel_item">
-                    <img src="https://i1.sndcdn.com/artworks-000238110426-xgibnp-t500x500.jpg">
-                    <a href="#" class="carousel_track_info">
-                        <p class="carousel_track_title">이렇게 살수는 없어요. . .</p>
-                        <p class="carousel_track_artist">강유정</p>
-                    </a>
-                    <div class="top_carousel_play play_trigger" data-tracknum="337683795">
-                        <img class="play_btn_img" src="/img/play.png">
-                    </div>
-                </li>
-                <li class="top_carousel_item">
-                    <img src="https://i1.sndcdn.com/artworks-000238011535-cd5h64-t500x500.jpg">
-                    <a href="#" class="carousel_track_info">
-                        <p class="carousel_track_title">아이스펍 x 요시 - FF</p>
-                        <p class="carousel_track_artist">아이스펍 ™</p>
-                    </a>
-                    <div class="top_carousel_play play_trigger" data-tracknum="337568237">
-                        <img class="play_btn_img" src="/img/play.png">
-                    </div>
-                </li>
-                <li class="top_carousel_item">
-                    <img src="https://i1.sndcdn.com/artworks-000237546738-6u31ej-t500x500.jpg">
-                    <a href="#" class="carousel_track_info">
-                        <p class="carousel_track_title">Coca Cola</p>
-                        <p class="carousel_track_artist">J.yung (제이영)</p>
-                    </a>
-                    <div class="top_carousel_play play_trigger" data-tracknum="337111382">
-                        <img class="play_btn_img" src="/img/play.png">
-                    </div>
-                </li>
-                <li class="top_carousel_item">
-                    <img src="https://i1.sndcdn.com/artworks-000237087635-2on5ka-t500x500.jpg">
-                    <a href="#" class="carousel_track_info">
-                        <p class="carousel_track_title">swimming pool (prod. 강유정)</p>
-                        <p class="carousel_track_artist">DA￦N</p>
-                    </a>
-                    <div class="top_carousel_play play_trigger" data-tracknum="336639441">
-                        <img class="play_btn_img" src="/img/play.png">
-                    </div>
-                </li>
-                <li class="top_carousel_item">
-                    <img src="https://i1.sndcdn.com/artworks-000234514095-081c2d-t500x500.jpg">
-                    <a href="#" class="carousel_track_info">
-                        <p class="carousel_track_title">PARI$ - PANDA$ feat JUTE$</p>
-                        <p class="carousel_track_artist">LANDAPANDA$</p>
-                    </a>
-                    <div class="top_carousel_play play_trigger" data-tracknum="트랙번호">
-                        <img class="play_btn_img" src="/img/play.png">
-                    </div>
-                </li>
-                <li class="top_carousel_item">
-                    <img src="https://i1.sndcdn.com/artworks-000229010716-jagcm7-t500x500.jpg">
-                    <a href="#" class="carousel_track_info">
-                        <p class="carousel_track_title">Calm swizzlely X D2ear - Where we are ? (w/ CHILDDIAHN)</p>
-                        <p class="carousel_track_artist">Calm swizzlely</p>
-                    </a>
-                    <div class="top_carousel_play play_trigger" data-tracknum="328540030">
-                        <img class="play_btn_img" src="/img/play.png">
-                    </div>
-                </li>
-                <li class="top_carousel_item">
-                    <img src="https://i1.sndcdn.com/artworks-000227606478-0zjomx-t500x500.jpg">
-                    <a href="#" class="carousel_track_info">
-                        <p class="carousel_track_title">Yonko - 다 (Feat. J.yung)</p>
-                        <p class="carousel_track_artist">J.yung (제이영)</p>
-                    </a>
-                    <div class="top_carousel_play play_trigger" data-tracknum="327277312">
-                        <img class="play_btn_img" src="/img/play.png">
-                    </div>
-                </li>
-                <li class="top_carousel_item">
-                    <img src="https://i1.sndcdn.com/artworks-000236570195-g5amf5-t500x500.jpg">
-                    <a href="#" class="carousel_track_info">
-                        <p class="carousel_track_title">거짓 (FEAT. GONHILLS )</p>
-                        <p class="carousel_track_artist">DA￦N</p>
-                    </a>
-                    <div class="top_carousel_play play_trigger" data-tracknum="325997406">
-                        <img class="play_btn_img" src="/img/play.png">
-                    </div>
-                </li>
-                <li class="top_carousel_item">
-                    <img src="https://i1.sndcdn.com/artworks-000223924757-x2y2ow-t500x500.jpg">
-                    <a href="#" class="carousel_track_info">
-                        <p class="carousel_track_title">Close (w/ PLZY & J.yung)</p>
-                        <p class="carousel_track_artist">Calm swizzlely</p>
-                    </a>
-                    <div class="top_carousel_play play_trigger" data-tracknum="324070227">
-                        <img class="play_btn_img" src="/img/play.png">
-                    </div>
-                </li>
-                <li class="top_carousel_item">
-                    <img src="https://i1.sndcdn.com/artworks-000216151599-yz9o9a-t500x500.jpg">
-                    <a href="#" class="carousel_track_info">
-                        <p class="carousel_track_title">EUCALYPT: MARCH 2017 MIXTAPE</p>
-                        <p class="carousel_track_artist">EUCALYPT</p>
-                    </a>
-                    <div class="top_carousel_play play_trigger" data-tracknum="316007140">
-                        <img class="play_btn_img" src="/img/play.png">
-                    </div>
-                </li>
-                <li class="top_carousel_item">
-                    <img src="https://i1.sndcdn.com/artworks-000209689043-i362gn-t500x500.jpg">
-                    <a href="#" class="carousel_track_info">
-                        <p class="carousel_track_title">MAZ.B & GONHILLS - 깍지(Bean Pod)</p>
-                        <p class="carousel_track_artist">MAZ.B</p>
-                    </a>
-                    <div class="top_carousel_play play_trigger" data-tracknum="309633076">
-                        <img class="play_btn_img" src="/img/play.png">
-                    </div>
-                </li>
-                <!-- ---------------------------------------------------------- -->
-            </ul>
+        <div class="sub_main">
+            <h2>OPEN MIC</h2>
+            <p>지금 바로 내 트랙을 공개하세요.</p>
+            <a>내 트랙 공개하기</a>
         </div>
-
-        <div class="main_content">
-            <div class="main_onstage">
-                <div class="page_width">
-                    <h2 class="sub_title">NOW ON STAGE<span class="n_stage_week">8월 4주차</span></h2>
-                    <div class="onstage_con_wrap">
-                        <ul>
-                            <li class="onstage_con">
-                                <img src="https://i1.sndcdn.com/artworks-000173376949-k8x4ze-t500x500.jpg">
-                                <a href="/opmic/detail.html" class="subject_wrap">
-                                    <p class="subject_title">Kamikaze (Feat. Wella Rhogus)</p>
-                                    <p class="subject_artist">OCT Official</p>
-                                </a>
-                                <p class="onstage_con_playtime">3:32</p>
-                                <div class="onstage_con_play play_trigger" data-tracknum="275435386"></div>
-                            </li>
-                            <!-- ---------------------------------------------------------- -->
-                            <li class="onstage_con">
-                                <img src="https://i1.sndcdn.com/artworks-000125253239-2qo7tn-t500x500.jpg">
-                                <a href="/opmic/detail.html" class="subject_wrap">
-                                    <p class="subject_title">UNUSUAL - 얼룩말 울음소리 [VIDEO IN DESCRIPTION]</p>
-                                    <p class="subject_artist">eunseongjoe</p>
-                                </a>
-                                <p class="onstage_con_playtime">3:32</p>
-                                <div class="onstage_con_play play_trigger" data-tracknum="217650462"></div>
-                            </li>
-                            <li class="onstage_con">
-                                <img src="https://i1.sndcdn.com/artworks-000237546738-6u31ej-t500x500.jpg">
-                                <a href="/opmic/detail.html" class="subject_wrap">
-                                    <p class="subject_title">Coca Cola</p>
-                                    <p class="subject_artist">J.yung (제이영)</p>
-                                </a>
-                                <p class="onstage_con_playtime">3:32</p>
-                                <div class="onstage_con_play play_trigger" data-tracknum="337111382"></div>
-                            </li>
-                            <li class="onstage_con">
-                                <img src="https://i1.sndcdn.com/artworks-000237087635-2on5ka-t500x500.jpg">
-                                <a href="/opmic/detail.html" class="subject_wrap">
-                                    <p class="subject_title">swimming pool (prod. 강유정)</p>
-                                    <p class="subject_artist">DA￦N</p>
-                                </a>
-                                <p class="onstage_con_playtime">3:32</p>
-                                <div class="onstage_con_play play_trigger" data-tracknum="336639441"></div>
-                            </li>
-                            <li class="onstage_con">
-                                <img src="https://i1.sndcdn.com/artworks-000234514095-081c2d-t500x500.jpg">
-                                <a href="/opmic/detail.html" class="subject_wrap">
-                                    <p class="subject_title">PARI$ - PANDA$ feat JUTE$</p>
-                                    <p class="subject_artist">LANDAPANDA$</p>
-                                </a>
-                                <p class="onstage_con_playtime">3:32</p>
-                                <div class="onstage_con_play play_trigger" data-tracknum="337111382"></div>
-                            </li>
-
-
-                            <li class="onstage_con">
-                                <img src="https://i1.sndcdn.com/artworks-000229010716-jagcm7-t500x500.jpg">
-                                <a href="/opmic/detail.html" class="subject_wrap">
-                                    <p class="subject_title">Calm swizzlely X D2ear - Where we are ? (w/ CHILDDIAHN)</p>
-                                    <p class="subject_artist">Calm swizzlely</p>
-                                </a>
-                                <p class="onstage_con_playtime">3:32</p>
-                                <div class="onstage_con_play play_trigger" data-tracknum="328540030"></div>
-                            </li>
-                            <li class="onstage_con">
-                                <img src="https://i1.sndcdn.com/artworks-000227606478-0zjomx-t500x500.jpg">
-                                <a href="/opmic/detail.html" class="subject_wrap">
-                                    <p class="subject_title">Yonko - 다 (Feat. J.yung)</p>
-                                    <p class="subject_artist">J.yung (제이영)</p>
-                                </a>
-                                <p class="onstage_con_playtime">3:32</p>
-                                <div class="onstage_con_play play_trigger" data-tracknum="327277312"></div>
-                            </li>
-                            <li class="onstage_con">
-                                <img src="https://i1.sndcdn.com/artworks-000236570195-g5amf5-t500x500.jpg">
-                                <a href="/opmic/detail.html" class="subject_wrap">
-                                    <p class="subject_title">거짓 (FEAT. GONHILLS )</p>
-                                    <p class="subject_artist">DA￦N</p>
-                                </a>
-                                <p class="onstage_con_playtime">3:32</p>
-                                <div class="onstage_con_play play_trigger" data-tracknum="325997406"></div>
-                            </li>
-                            <li class="onstage_con">
-                                <img src="https://i1.sndcdn.com/artworks-000223924757-x2y2ow-t500x500.jpg">
-                                <a href="/opmic/detail.html" class="subject_wrap">
-                                    <p class="subject_title">Close (w/ PLZY & J.yung)</p>
-                                    <p class="subject_artist">Calm swizzlely</p>
-                                </a>
-                                <p class="onstage_con_playtime">3:32</p>
-                                <div class="onstage_con_play play_trigger" data-tracknum="324070227"></div>
-                            </li>
-                            <li class="onstage_con">
-                                <img src="https://i1.sndcdn.com/artworks-000216151599-yz9o9a-t500x500.jpg">
-                                <a href="/opmic/detail.html" class="subject_wrap">
-                                    <p class="subject_title">EUCALYPT: MARCH 2017 MIXTAPE</p>
-                                    <p class="subject_artist">EUCALYPT</p>
-                                </a>
-                                <p class="onstage_con_playtime">3:32</p>
-                                <div class="onstage_con_play play_trigger" data-tracknum="316007140"></div>
-                            </li>
-
-
-                            <!-- ---------------------------------------------------------- -->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="main_spacer">
-                <h3>지금 내 트랙을 공개하세요.</h3>
-                <p>#새로운_발견 #새로운_영감</p>
-                <a>내 트랙 공개하기</a>
-            </div>
-            <div class="main_openmic">
-                <div class="page_width">
-                    <h2 class="sub_title">OPEN MIC</h2>
-                    <div class="openmic_con_wrap">
+        <div class="list_wrap">
+            <div class="page_width">
+                <div class="openmic_con_wrap">
                         <ul>
                             <li>
                                 <div class="opm_thumb" style="background-image:url(https://i1.sndcdn.com/artworks-000241159224-7l70gw-t500x500.jpg)"></div>
@@ -399,13 +151,13 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="opm_thumb" style="background-image:url(https://i1.sndcdn.com/artworks-000187616839-of52c2-t500x500.jpg)"></div>
+                                <div class="opm_thumb" style="background-image:url(https://i1.sndcdn.com/artworks-000240667238-6f0995-t200x200.jpg)"></div>
                                 <div class="opm_info">
-                                    <div class="opm_profile_img" style="background-image: url(https://i1.sndcdn.com/avatars-000329755334-16hdn9-t120x120.jpg);"></div>
+                                    <div class="opm_profile_img" style="background-image: url(https://i1.sndcdn.com/avatars-000331393384-8hwh60-t120x120.jpg);"></div>
                                     <a href="#">
-                                        <p>KA-YU</p>
+                                        <p>y o s i よし</p>
                                     </a>
-                                    <h4>KA-YU - The North [Baile Funk]</h4>
+                                    <h4>fear (rough demo)</h4>
                                     <a class="opm_play play_trigger" data-tracknum="340295822"></a>
                                 </div>
                                 <div class="opm_content">
@@ -475,14 +227,14 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="opm_thumb" style="background-image:url(https://i1.sndcdn.com/artworks-000241609389-ym8cre-t500x500.jpg)"></div>
+                                <div class="opm_thumb" style="background-image:url(https://i1.sndcdn.com/artworks-000195133232-viydk8-t500x500.jpg)"></div>
                                 <div class="opm_info">
-                                    <div class="opm_profile_img" style="background-image: url(https://i1.sndcdn.com/avatars-000333027092-6d8bu6-t120x120.jpg);"></div>
+                                    <div class="opm_profile_img" style="background-image: url(https://i1.sndcdn.com/avatars-000149216752-53eb05-t120x120.jpg);"></div>
                                     <a href="#">
-                                        <p>novh.</p>
+                                        <p>NiiHWA</p>
                                     </a>
-                                    <h4>보호본능 (With. Dawn)</h4>
-                                    <a class="opm_play play_trigger" data-tracknum="341276520"></a>
+                                    <h4>니화(NiiHWA) - XYZ</h4>
+                                    <a class="opm_play play_trigger" data-tracknum="294578598"></a>
                                 </div>
                                 <div class="opm_content">
                                     <p>독백을 표현한 곡입니다.<br>많이 들어주세요.<br><br>같이 작업하실 분 구합니다. 비트 작업량 많구요 듣고 피드백 주세요!</p>
@@ -627,14 +379,14 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="opm_thumb" style="background-image:url(https://i1.sndcdn.com/artworks-000187166056-rptayx-t500x500.jpg"></div>
+                                <div class="opm_thumb" style="background-image:url(https://i1.sndcdn.com/artworks-000213137857-4d6tck-t500x500.jpg"></div>
                                 <div class="opm_info">
-                                    <div class="opm_profile_img" style="background-image: url(https://i1.sndcdn.com/avatars-000315351110-r37wnb-t120x120.jpg);"></div>
+                                    <div class="opm_profile_img" style="background-image: url(https://i1.sndcdn.com/avatars-000302413504-wma235-t120x120.jpg);"></div>
                                     <a href="#">
-                                        <p>UNOS</p>
+                                        <p>ThatBoiB</p>
                                     </a>
-                                    <h4>RED</h4>
-                                    <a class="opm_play play_trigger" data-tracknum="286601528"></a>
+                                    <h4>Boi B - 스톤콜드스터너 ( Jay Park 'Hulk Hogan' Remix )</h4>
+                                    <a class="opm_play play_trigger" data-tracknum="71933774"></a>
                                 </div>
                                 <div class="opm_content">
                                     <p>I got stone cold stunner 매일 밤 돈 벌어<br>반지하에서 날아오른다음 시청앞에서 살어<br>제작년엔 몰랐지 매끼니미다 초밥집<br>이제 좋은아침은 진심인 인사가 돼 but 여전히 do ma thang</p>
@@ -646,17 +398,17 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="opm_thumb" style="background-image:url(https://i1.sndcdn.com/artworks-000223962950-akuzkw-t500x500.jpg)"></div>
+                                <div class="opm_thumb" style="background-image:url(https://i1.sndcdn.com/artworks-000045565867-8aqxlc-t500x500.jpg)"></div>
                                 <div class="opm_info">
-                                    <div class="opm_profile_img" style="background-image: url(https://i1.sndcdn.com/avatars-000311637889-afu1xo-t120x120.jpg);"></div>
+                                    <div class="opm_profile_img" style="background-image: url(https://i1.sndcdn.com/avatars-000240727976-29rnyb-t120x120.jpg);"></div>
                                     <a href="#">
-                                        <p>Blu</p>
+                                        <p>Ugly Duck</p>
                                     </a>
-                                    <h4>Blu - ITSNOTOVERYET (ft. Rollyboi )</h4>
+                                    <h4>느낌 So Young (될 대로 되라고 해 Remix)</h4>
                                     <a class="opm_play play_trigger" data-tracknum="87979872"></a>
                                 </div>
                                 <div class="opm_content">
-                                    <p>it' s not over yet<br>우리사이 끝난 거였니<br>너혼자만 정리하고<br>너혼자서 끝내 <br>이거완전 어이없어<br>oh i don't know you <br>널 이해할 생각따윈<br>i don't no more<br>it's not fucking good<br>여유로운척 하는게더 fucking bad<br>boy you think it's not over yet?<br>근데왜또 취해있어 이시간에<br>oh i need your loving<br>we don't need a change<br>we ain't never telling<br>" 누구 잘못인지 "</p>
+                                    <p>느낌 So Young (될 대로 되라고 해 Remix) - Ugly Duck, Zico &amp; Crush <br>Artwork by Row Digga</p>
                                 </div>
                                 <div class="opm_feedback">
                                     <span class="dope_btn rateit" data-dope="레츠기릿"><p></p><a>648</a></span>
@@ -666,38 +418,15 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-
             </div>
         </div>
-
-
-
     </div>
+
+
     <div id="footer">
         <p>copyright© DOPEHOTZ. all right reserved.</p>
     </div>
-
-    <div class="floating_player_wrap">
-        <!--
-            <iframe class="sc_widget" id="iframe_sc_widget" src="//w.soundcloud.com/player/?url=//api.soundcloud.com/tracks/89640252"></iframe>
-            <div class="float_player_wrap">
-                <div class="float_player">
-                    <div class="progress">
-                        <div class="progress_bar"></div>
-                    </div>
-                    <div class="float_artwork" style="background-image: url(&quot;https://i1.sndcdn.com/avatars-000025344051-to5lum-large.jpg&quot;);"></div>
-                    <div class="float_info">
-                        <div class="float_title">Two Hearts</div>
-                        <div class="flost_artist">@dreknight23 (twitter)</div>
-                    </div>
-                    <div class="controls"><button class="play now"></button></div>
-                    <div class="float_player_close_btn"></div>
-                </div>
-            </div>
--->
-    </div>
-
+    <div class="floating_player_wrap"></div>
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="/js/owl.carousel.min.js"></script>
