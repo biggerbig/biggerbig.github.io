@@ -1,10 +1,8 @@
-var cacheName = 'DOPEHOTZ-WEB-APP-V1';
+var cacheName = 'DOPEHOTZ-WEB-APP-V2';
 var filesToCache = [
   '/',
   '/css/base.css',
   '/css/case.css',
-  '/js/float-player.js',
-  '/js/menu.js',
 ];
 
 self.addEventListener('install', function (e) {
