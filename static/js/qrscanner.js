@@ -207,8 +207,8 @@ function QRCodeScanner(options) {
     // Initialization of QRCodeScanner
     Object.assign(rootElement.style, {
       position: 'relative',
-      width: width + 'px',
-      height: height + 'px',
+      width: width + '%',
+      height: height + '%',
       backgroundColor: 'black'
     });
     appendChildren(rootElement, [
