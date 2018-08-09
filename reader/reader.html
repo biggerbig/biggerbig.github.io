@@ -50,7 +50,7 @@
         }
     </style>
     <link href="/static/css/base.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript">
         $(window).load(function () {
             $(".loader_wrap").fadeOut("3000");
@@ -125,7 +125,23 @@
     </div>
     <div id="content">
         <div class="container">
-            
+            <video id="preview"></video>
+            <script src="/static/js/instascan.min.js"></script>
+            <script type="text/javascript">
+                let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+                scanner.addListener('scan', function (content) {
+                    console.log(content);
+                });
+                Instascan.Camera.getCameras().then(function (cameras) {
+                    if (cameras.length > 0) {
+                    scanner.start(cameras[0]);
+                    } else {
+                    console.error('No cameras found.');
+                    }
+                }).catch(function (e) {
+                    console.error(e);
+                });
+            </script>
         </div>
     </div>
 
