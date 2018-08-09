@@ -16,6 +16,7 @@ window.onload = function() {
     onScanSuccess: function(result) {
       console.log('Scan Success', result);
       document.getElementById('message').textContent = result;
+      alert(result);
     },
     onScanError: function(error) {
       console.log('Scan Error', error);
