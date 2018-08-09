@@ -88,7 +88,7 @@ function dataURItoBlob(dataURI) {
     type: mimeString
   });
 }
-scanBarcode();
+
 // add button event
 buttonGo.onclick = function () {
   if (isPC) {
@@ -98,7 +98,7 @@ buttonGo.onclick = function () {
   }
 
   isPaused = false;
-  scanBarcode();
+  
   buttonGo.disabled = true;
 };
 
@@ -204,3 +204,5 @@ function gotStream(stream) {
 function handleError(error) {
   console.log('Error: ', error);
 }
+
+scanBarcode();
