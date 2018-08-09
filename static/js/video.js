@@ -89,28 +89,21 @@ function dataURItoBlob(dataURI) {
   });
 }
 
-// add button event
-buttonGo.onclick = function () {
+if (ZXing == null) {
+    
+}else {
   if (isPC) {
     canvas.style.display = 'none';
   } else {
     mobileCanvas.style.display = 'none';
   }
-
   isPaused = false;
-  
-  buttonGo.disabled = true;
-};
+  scanBarcode();
+}
 
 // scan barcode
 function scanBarcode() {
   barcode_result.textContent = "";
-
-  if (ZXing == null) {
-    buttonGo.disabled = false;
-    alert("Barcode Reader is not ready!");
-    return;
-  }
 
   var data = null,
     context = null,
@@ -204,8 +197,3 @@ function gotStream(stream) {
 function handleError(error) {
   console.log('Error: ', error);
 }
-
-window.onload = function(){
-  scanBarcode();
-}
-
