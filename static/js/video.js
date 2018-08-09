@@ -172,7 +172,6 @@ function gotDevices(deviceInfos) {
 }
 
 function getStream() {
-  buttonGo.disabled = false;
   if (window.stream) {
     window.stream.getTracks().forEach(function(track) {
       track.stop();
