@@ -205,4 +205,7 @@ function handleError(error) {
   console.log('Error: ', error);
 }
 
-scanBarcode();
+window.onload = function(){
+  scanBarcode();
+}
+
