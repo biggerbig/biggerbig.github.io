@@ -1,157 +1,42 @@
-<!DOCTYPE html>
-<html lang="ko">
-
-<head>
-    <meta name="theme-color" content="#242425" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="로또롱또똣">
-    <title>로또롱또똣</title>
-    <link rel="icon" sizes="192x192" href="/icon.png" />
-    <link rel="apple-touch-icon" href="/icon.png">
-    <meta name="msapplication-TileImage" content="icon.png">
-    <meta name="msapplication-TileColor" content="#2F3BA2">
-    <link rel="manifest" href="/manifest.json">
-    <style>
-        .loader_wrap {
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: rgba(24, 24, 25, 0.9);
-            z-index: 999;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-align-items: center;
-            align-items: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-        }
-
-        .loader_wrap>div {
-            width: 100%;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-align-items: center;
-            align-items: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .loader_wrap>div>p {
-            text-align: center;
-            font-size: 20px;
-            font-family: 'chosun_ilbo_myungjo';
-            line-height: 26px;
-        }
-    </style>
-    <link href="/static/css/base.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript">
-        $(window).load(function () {
-            $(".loader_wrap").fadeOut("3000");
-            setTimeout(function () {
-                $(".loader_wrap").remove();
-            }, 1000);
-            var splashCopy = '';
-            var letters = ['로또는<br>운 입니다.', '약 815만분의 1.<br>확률은 모두 동일합니다.', '로또하기<br>딱 좋은 기분', '오늘은 왠지<br>느낌이 좋다.', '쓰는건 알아서 쓸테니<br>걱정말고 걸려라.', '당첨은<br>생일과 상관 없습니다.', '자동이 아니라면<br>언제 사든 똑같습니다.', '자동이 아니라면<br>어디서 사든 똑같습니다.', '주변 사람들에게<br>추천하기♥', '매주한번 돌아오는<br>기부의 시간', '로또롱또똣<br>별 뜻은 없습니다.'];
-
-            splashCopy += letters[Math.floor(Math.random() * letters.length)];
-            document.getElementById('splash_copy').innerHTML = splashCopy;
-        });
-    </script>
-</head>
-
-<body>
-    <div class="loader_wrap">
-        <div>
-            <p id="splash_copy"></p>
-        </div>
+<html>
+  <head>
+    <title>Instascan &ndash; Demo</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+  </head>
+  <body>
+    <a href="https://github.com/schmich/instascan"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+    <div id="app">
+      <div class="sidebar">
+        <section class="cameras">
+          <h2>Cameras</h2>
+          <ul>
+            <li v-if="cameras.length === 0" class="empty">No cameras found</li>
+            <li v-for="camera in cameras">
+              <span v-if="camera.id == activeCameraId" :title="formatName(camera.name)" class="active">{{ formatName(camera.name) }}</span>
+              <span v-if="camera.id != activeCameraId" :title="formatName(camera.name)">
+                <a @click.stop="selectCamera(camera)">{{ formatName(camera.name) }}</a>
+              </span>
+            </li>
+          </ul>
+        </section>
+        <section class="scans">
+          <h2>Scans</h2>
+          <ul v-if="scans.length === 0">
+            <li class="empty">No scans yet</li>
+          </ul>
+          <transition-group name="scans" tag="ul">
+            <li v-for="scan in scans" :key="scan.date" :title="scan.content">{{ scan.content }}</li>
+          </transition-group>
+        </section>
+      </div>
+      <div class="preview-container">
+        <video id="preview"></video>
+      </div>
     </div>
-    <div id="header">
-        <div class="logo_area">
-            <a href="/"></a>
-        </div>
-        <div class="go_mylotto"></div>
-    </div>
-    <div class="menu_btn_m">
-        <i></i>
-        <i></i>
-        <i></i>
-    </div>
-    <div class="page_cover" onclick="history.back();"></div>
-    <div class="menu">
-        <div>
-            <p>약 814만분의 1.
-                <br>모두의 확률은 같다.
-                <br>하지만 오늘은,
-                <br>왠지 느낌이 좋다.</p>
-            <h2>로또
-                <br>롱또똣</h2>
-        </div>
-        <ul class="gnb">
-            <li>
-                <a href="/">홈</a>
-            </li>
-            <li>
-                <a href="#">내 번호</a>
-            </li>
-            <li>
-                <a href="/picker/picker.html">번호생성</a>
-            </li>
-            <li>
-                <a href="#">직접입력</a>
-            </li>
-            <li>
-                <a href="naversearchapp://search?qmenu=qrcode&version=1">QR 당첨확인</a>
-            </li>
-            <li>
-                <a href="#">당첨번호</a>
-            </li>
-            <li>
-                <a href="#">커뮤니티</a>
-            </li>
-        </ul>
-        <ul class="gnb_sub">
-            <li>
-                <a href="#">로그인</a>
-            </li>
-            <!-- <li><a href="#">로그아웃</a></li> -->
-        </ul>
-    </div>
-    <div id="content">
-        <div class="container">
-            <video id="preview"></video>
-            <script src="/static/js/zxing.js"></script>
-            <script src="/static/js/instascan.min.js"></script>
-            <script src="/static/js/camera.js"></script>
-            <script src="/static/js/scanner.js"></script>
-            <script type="text/javascript">
-                let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
-                scanner.addListener('scan', function (content) {
-                    console.log(content);
-                });
-                Instascan.Camera.getCameras().then(function (cameras) {
-                    if (cameras.length > 0) {
-                    scanner.start(cameras[0]);
-                    } else {
-                    console.error('No cameras found.');
-                    }
-                }).catch(function (e) {
-                    console.error(e);
-                });
-            </script>
-        </div>
-    </div>
-
-
-    <!-- 푸터 JS -->
-    <script src="/static/js/common.js"></script>
-    <!-- 푸터 JS -->
-</body>
-
+    <script type="text/javascript" src="app.js"></script>
+  </body>
 </html>
