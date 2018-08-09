@@ -130,7 +130,7 @@ function scanBarcode() {
     dbrCanvas = mobileCanvas;
   }
 
-  context.drawImage(videoElement, 0, 0, width, height);
+  // context.drawImage(videoElement, 0, 0, width, height);
 
   var vid = document.getElementById("video");
   console.log("video width: " + vid.videoWidth + ", height: " + vid.videoHeight);
