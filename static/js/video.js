@@ -88,15 +88,14 @@ function dataURItoBlob(dataURI) {
     type: mimeString
   });
 }
-
-if (isPC) {
-  canvas.style.display = 'none';
-} else {
-  mobileCanvas.style.display = 'none';
-}
+scanBarcode();
 // add button event
 buttonGo.onclick = function () {
-
+  if (isPC) {
+    canvas.style.display = 'none';
+  } else {
+    mobileCanvas.style.display = 'none';
+  }
 
   isPaused = false;
   scanBarcode();
@@ -131,7 +130,7 @@ function scanBarcode() {
     dbrCanvas = mobileCanvas;
   }
 
-  // context.drawImage(videoElement, 0, 0, width, height);
+  context.drawImage(videoElement, 0, 0, width, height);
 
   var vid = document.getElementById("video");
   console.log("video width: " + vid.videoWidth + ", height: " + vid.videoHeight);
