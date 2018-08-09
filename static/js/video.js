@@ -34,9 +34,9 @@ var decodeCallback = function (ptr, len, resultIndex, resultCount) {
   barcode_result.textContent = String.fromCharCode.apply(null, result);
   buttonGo.disabled = false;
   if (isPC) {
-    canvas.style.display = 'block';
+    canvas.style.display = 'none';
   } else {
-    mobileCanvas.style.display = 'block';
+    mobileCanvas.style.display = 'none';
   }
 };
 
