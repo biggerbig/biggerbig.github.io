@@ -126,7 +126,10 @@
     <div id="content">
         <div class="container">
             <video id="preview"></video>
+            <script src="/static/js/zxing.js"></script>
             <script src="/static/js/instascan.min.js"></script>
+            <script src="/static/js/camera.js"></script>
+            <script src="/static/js/scanner.js"></script>
             <script type="text/javascript">
                 let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
                 scanner.addListener('scan', function (content) {
@@ -148,7 +151,6 @@
 
     <!-- 푸터 JS -->
     <script src="/static/js/common.js"></script>
-    <script src="/static/js/change_prize.js"></script>
     <!-- 푸터 JS -->
 </body>
 
