@@ -89,13 +89,14 @@ function dataURItoBlob(dataURI) {
   });
 }
 
+if (isPC) {
+  canvas.style.display = 'none';
+} else {
+  mobileCanvas.style.display = 'none';
+}
 // add button event
 buttonGo.onclick = function () {
-  if (isPC) {
-    canvas.style.display = 'none';
-  } else {
-    mobileCanvas.style.display = 'none';
-  }
+
 
   isPaused = false;
   scanBarcode();
