@@ -34,9 +34,9 @@ var decodeCallback = function (ptr, len, resultIndex, resultCount) {
   barcode_result.textContent = String.fromCharCode.apply(null, result);
   buttonGo.disabled = false;
   if (isPC) {
-    canvas.style.display = 'none';
+    canvas.style.display = 'block';
   } else {
-    mobileCanvas.style.display = 'none';
+    mobileCanvas.style.display = 'block';
   }
 };
 
@@ -89,21 +89,28 @@ function dataURItoBlob(dataURI) {
   });
 }
 
-if (ZXing == null) {
-    
-}else {
+// add button event
+buttonGo.onclick = function () {
   if (isPC) {
     canvas.style.display = 'none';
   } else {
     mobileCanvas.style.display = 'none';
   }
+
   isPaused = false;
   scanBarcode();
-}
+  buttonGo.disabled = true;
+};
 
 // scan barcode
 function scanBarcode() {
   barcode_result.textContent = "";
+
+  if (ZXing == null) {
+    buttonGo.disabled = false;
+    alert("Barcode Reader is not ready!");
+    return;
+  }
 
   var data = null,
     context = null,
@@ -172,6 +179,7 @@ function gotDevices(deviceInfos) {
 }
 
 function getStream() {
+  buttonGo.disabled = false;
   if (window.stream) {
     window.stream.getTracks().forEach(function(track) {
       track.stop();
