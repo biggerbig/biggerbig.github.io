@@ -1,3 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Nanum+Gothic); 
+
+@font-face{ 
+    font-family:'Nanum Gothic'; 
+    font-weight: normal; 
+    font-style: normal; 
+} 
+ 
+@font-face{ 
+    font-family:'Nanum Gothic'; 
+    font-weight: bold; 
+    font-style: normal; 
+}
+
 * {
     text-decoration: none;
     -webkit-text-size-adjust: none;
@@ -1599,4 +1613,378 @@ caption {
     font-size: 19px;
     text-decoration: none;
     text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* 마이페이지 */
+
+.mypage_wrap {
+    padding: 50px 0;
+}
+
+.mypage_layout {
+    width: 1026px;
+    box-sizing: border-box;
+    border: 1px solid #e5e5e5;
+    margin: 0 auto;
+    font-size: 0px;
+}
+
+.mypage_top {
+    font-size: 0px;
+}
+
+.mypage_top .mypage_title {
+    display: inline-block;
+    width: 180px;
+    height: 240px;
+    background-color: #8cad6b;
+    vertical-align: top;
+    text-align: center;
+    padding: 39px 0 0;
+    box-sizing: border-box;
+
+}
+
+.mypage_top .mypage_func_wrap {
+    display: inline-block;
+    width: 844px;
+    height: 240px;
+    border-bottom: 1px solid #e5e5e5;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.mypage_aside {
+    display: inline-block;
+    width: 180px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.mypage_content {
+    display: inline-block;
+    width: 844px;
+    border-left: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    vertical-align: top;
+    padding: 50px 30px;
+}
+
+.mypage_title .user_info i {
+    background-image: url(/img/assets/user_grade.png);
+    width: 80px;
+    height: 80px;
+    background-size: auto 80px;
+    background-repeat: no-repeat;
+    display: block;
+    margin: 0 auto;
+}
+
+.mypage_title .user_info .user_grade.member {
+    background-position: left;
+}
+
+.mypage_title .user_info .user_grade.family {
+    background-position: right;
+}
+
+.mypage_title .user_info p {
+    font-size: 17px;
+    line-height: 17px;
+    text-align: center;
+    color: #fff;
+    margin-top: 14px;
+}
+
+.mypage_title .user_info p strong {
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 21px;
+    text-align: center;
+    color: #fff;
+}
+
+.mypage_title .user_info .go_user_btn {
+    font-size: 13px;
+    color: #fff;
+    padding-left: 19px;
+    display: inline-block;
+    line-height: 14px;
+    background-image: url(/img/assets/setting_icon.png);
+    background-repeat: no-repeat;
+    margin-top: 39px;
+}
+
+.mypage_func_wrap {
+    padding: 39px 0;
+    background-color: #f5f5f5;
+}
+
+.mypage_func_wrap ul {
+    font-size: 0px;
+}
+
+.mypage_func_wrap ul li {
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    width: 280px;
+    border-right: 1px solid #e2e2e2;
+}
+
+.mypage_func_wrap ul li:last-child {
+    border: none;
+}
+
+.mypage_func_wrap ul li strong {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    line-height: 1;
+    display: block;
+    margin-top: 15px;
+}
+
+.mypage_func_wrap ul li p {
+    display: block;
+    font-size: 34px;
+    line-height: 1;
+    color: #333;
+    margin-top: 36px;
+}
+
+.mypage_aside h3 {
+    font-size: 20px;
+    color: #6ca435;
+    line-height: 1;
+    padding: 30px 8px;
+    box-sizing: border-box;
+}
+
+.mypage_aside > ul {
+    border-top: 1px solid #e2e2e2;
+}
+
+.mypage_aside > ul > li {
+    font-size: 17px;
+    line-height: 30px;
+    color: #333;
+    border-bottom: 1px solid #e2e2e2;
+    padding: 17px 8px;
+}
+
+.mypage_aside > ul > li.selected {
+    font-weight: bold;
+}
+
+.mypage_aside > ul > li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #333;
+}
+
+.mypage_aside > ul > li ul {
+    padding: 3px 0;
+    border-top: 0;
+    display: none;
+}
+
+.mypage_aside > ul > li.selected ul {
+    display: block;
+}
+
+.mypage_aside > ul > li ul li {
+    font-size: 14px;
+    border-bottom: 0;
+    color: #666;
+    padding: 0;
+    font-weight: normal;
+}
+
+.mypage_aside > ul > li ul li.selected {
+    font-weight: bold;
+}
+
+.mypage_aside > ul > li ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #666;
+}
+
+.mypage_list_block + .mypage_list_block {
+    margin-top: 50px;
+}
+
+.mypage_list_block h4 {
+    font-size: 17px;
+    line-height: 1;
+    color: #333;
+    font-weight: bold;
+    padding-bottom: 12px;
+    position: relative;
+}
+
+.mypage_list_block h4 span {
+    margin-left: 20px;
+    font-size: 12px;
+    line-height: 1;
+    color: #666;
+    display: inline-block;
+    font-weight: normal;
+}
+
+.mypage_list_block h4 a {
+    width: 18px;
+    height: 18px;
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 0px;
+    background-image: url(/img/assets/mypage_more_icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px;
+}
+
+.mypage_list_block .order_list {
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 2px solid #6ca435;
+    display: table;
+    border-collapse: collapse;
+}
+
+.mypage_list_block .empty_list strong {
+    line-height: 198px;
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
+}
+
+.order_list > li {
+    width: 100%;
+    height: 154px;
+    box-sizing: border-box;
+    display: table-row;
+}
+
+.order_list > li + li {
+    border-top: 1px solid #e5e5e5;
+}
+
+.order_list li > a {
+    display: table-cell;
+    width: 559px;
+    vertical-align: middle;
+}
+
+.order_list li img {
+    width: 116px;
+    height: 116px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.mypage_list_block .empty_list {
+    height: 198px;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    display: block;
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 2px solid #6ca435;
+}
+
+.order_btn_wrap {
+    display: table-cell;
+    vertical-align: middle;
+    width: 111px;
+    height: 116px;
+    text-align: right;
+}
+
+.order_list_info {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 20px;
+    width: 443px;
+    box-sizing: border-box;
+}
+
+.order_list_info li {
+    font-size: 12px;
+    color: #666;
+    line-height: 20px;
+}
+
+.order_list_info li + li {
+    margin-top: 8px;
+}
+
+.order_list_info .order_total {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.order_status {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.order_status p {
+    line-height: 116px;
+    font-size: 12px;
+    width: 111px;
+    text-align: center;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+
+.order_btn_wrap a {
+    width: 90px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #bbb;
+    line-height: 24px;
+    height: 26px;
+    display: inline-block;
+
+    color: #666;
+}
+
+.order_btn_wrap a + a {
+    margin-top: 4px
+}
+
+.order_btn_wrap a.order_cancel {
+    color: #be271d !important
+}
+
+.mypage_list_block .wish_list {
+    background: #f4f4f4;
+    border-top: 2px solid #6ca435;
+    padding: 40px 17px;
+}
+
+.mypage_list_block .wish_list li {
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+}
+
+.mypage_list_block .wish_list img {
+    width: 117px;
+    height: 117px;
 }
