@@ -1,15 +1,15 @@
-@import url(https://fonts.googleapis.com/css?family=Nanum+Gothic); 
+@import url(https://fonts.googleapis.com/css?family=Nanum+Gothic);
 
-@font-face{ 
-    font-family:'Nanum Gothic'; 
-    font-weight: normal; 
-    font-style: normal; 
-} 
- 
-@font-face{ 
-    font-family:'Nanum Gothic'; 
-    font-weight: bold; 
-    font-style: normal; 
+@font-face {
+    font-family: 'Nanum Gothic';
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nanum Gothic';
+    font-weight: bold;
+    font-style: normal;
 }
 
 * {
@@ -333,7 +333,7 @@ caption {
     width: 1026px;
 }
 
-.footer_bottom p{
+.footer_bottom p {
     font-size: 14px;
     line-height: 2;
     color: #313131;
@@ -363,6 +363,39 @@ caption {
     background-position: center;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.paging_wrap {
+    width: 100%;
+    font-size: 0px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.paging_wrap ol{
+    display: inline-block;
+}
+
+.paging_wrap a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    border: 1px solid #a7a39e;
+    font-size: 13px;
+    color: #a7a39e;
+    margin: 0 3px;
+}
+
+.paging_wrap ol li {
+    display: inline-block;
+}
+
+.paging_wrap ol li.selected a {
+    background-color: #a7a39e;
+    color: #fff;
+    font-weight: bold;
 }
 
 
@@ -595,9 +628,7 @@ caption {
     font-weight: bold;
 }
 
-.list_style4 {
-    
-}
+.list_style4 {}
 
 .list_style4 ul {
     font-size: 0px;
@@ -652,7 +683,7 @@ caption {
     bottom: 0px;
     width: 100%;
     height: 50px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
 }
 
@@ -669,7 +700,7 @@ caption {
     display: block;
 }
 
-.list_style4 li:first-child .item_dec{
+.list_style4 li:first-child .item_dec {
     display: none;
 }
 
@@ -1037,7 +1068,7 @@ caption {
 .main_cont_box {
     position: relative;
     width: 1026px;
-    border: 1px solid #dddddd; 
+    border: 1px solid #dddddd;
     box-sizing: border-box;
     padding-left: 244px;
 }
@@ -1066,9 +1097,7 @@ caption {
     margin-bottom: 60px;
 }
 
-.direct_slide {
-    
-}
+.direct_slide {}
 
 .direct_slide_item {
     width: 600px;
@@ -1135,11 +1164,11 @@ caption {
     margin-bottom: 2px;
 }
 
-.direct_slide_wrap .d3d_navwrap .d3dprev{
+.direct_slide_wrap .d3d_navwrap .d3dprev {
     background-image: url(/img/assets/d3d_prev.png)
 }
 
-.direct_slide_wrap .d3d_navwrap .d3dnext{
+.direct_slide_wrap .d3d_navwrap .d3dnext {
     background-image: url(/img/assets/d3d_next.png)
 }
 
@@ -1245,7 +1274,7 @@ caption {
     border-right: 1px solid #E5E5E5;
 }
 
-.main_bottom_info_col:last-child{
+.main_bottom_info_col:last-child {
     border: none;
 }
 
@@ -1272,9 +1301,7 @@ caption {
     bottom: 0;
 }
 
-.main_bottom_info_col table td {
-    
-}
+.main_bottom_info_col table td {}
 
 .main_bottom_info_col table td p {
     overflow: hidden;
@@ -1325,7 +1352,7 @@ caption {
     font-size: 12px;
 }
 
-.main_bottom_info_col > em {
+.main_bottom_info_col>em {
     height: 30px;
     font-size: 16px;
     font-weight: 700;
@@ -1334,13 +1361,13 @@ caption {
     font-style: normal;
 }
 
-.main_bottom_info_col > strong {
+.main_bottom_info_col>strong {
     height: 55px;
     font-size: 36px;
     display: block;
 }
 
-.main_bottom_info_col > p {
+.main_bottom_info_col>p {
     font-size: 14px;
     line-height: 1.5;
     letter-spacing: -0.03em;
@@ -1378,7 +1405,7 @@ caption {
     letter-spacing: -1px;
 }
 
-.login_form_bx > input {
+.login_form_bx>input {
     position: relative;
     width: 340px;
     height: 50px;
@@ -1396,7 +1423,7 @@ caption {
     display: none;
 }
 
-.login_form_bx > a {
+.login_form_bx>a {
     display: inline-block;
     width: 360px;
     height: 50px;
@@ -1498,7 +1525,7 @@ caption {
     padding: 50px 0 30px;
 }
 
-.joinform_wrap > p {
+.joinform_wrap>p {
     position: relative;
     width: 100%;
     text-align: center;
@@ -1528,17 +1555,17 @@ caption {
     margin-top: 40px;
 }
 
-.join_form > div {
+.join_form>div {
     position: relative;
     text-align: center;
     margin-bottom: 10px;
 }
 
-.join_form > div > label {
+.join_form>div>label {
     display: none;
 }
 
-.join_form > div > input {
+.join_form>div>input {
     font-size: 16px;
     width: 628px;
     border: 1px solid #629b2c;
@@ -1547,7 +1574,7 @@ caption {
     padding-left: 20px;
 }
 
-.join_form > div > a {
+.join_form>div>a {
     display: inline-block;
     position: absolute;
     top: 0px;
@@ -1562,7 +1589,7 @@ caption {
     line-height: 68px;
 }
 
-.join_form > div > p {
+.join_form>div>p {
     font-size: 16px;
     padding-bottom: 15px;
     color: #333333;
@@ -1571,17 +1598,17 @@ caption {
     padding: 10px 20px;
 }
 
-.join_form > div ul {
+.join_form>div ul {
     font-size: 0px;
     margin-bottom: 30px;
 }
 
-.join_form > div ul li {
+.join_form>div ul li {
     font-size: 16px;
     display: inline-block;
 }
 
-.join_form > div ul li input[type="radio"] + label {
+.join_form>div ul li input[type="radio"]+label {
     background-image: url(/img/assets/radio_normal.png);
     background-repeat: no-repeat;
     background-position: left center;
@@ -1593,7 +1620,7 @@ caption {
     padding-left: 22px;
 }
 
-.join_form > div ul li input[type="radio"]:checked + label {
+.join_form>div ul li input[type="radio"]:checked+label {
     background-image: url(/img/assets/radio_selected.png);
 }
 
@@ -1645,7 +1672,6 @@ caption {
 .mypage_top .mypage_title {
     display: inline-block;
     width: 180px;
-    height: 240px;
     background-color: #8cad6b;
     vertical-align: top;
     text-align: center;
@@ -1654,13 +1680,28 @@ caption {
 
 }
 
+.mypage_top .mypage_title.option_mypage {
+    height: 240px;
+}
+
+.mypage_top .mypage_title.option_help {
+    height: 141px;
+}
+
 .mypage_top .mypage_func_wrap {
     display: inline-block;
     width: 844px;
-    height: 240px;
     border-bottom: 1px solid #e5e5e5;
     vertical-align: top;
     box-sizing: border-box;
+}
+
+.mypage_top .mypage_func_wrap.option_mypage {
+    height: 240px;;
+}
+
+.mypage_top .mypage_func_wrap.option_help {
+    height: 141px;;
 }
 
 .mypage_aside {
@@ -1725,6 +1766,13 @@ caption {
     margin-top: 39px;
 }
 
+.mypage_title .help_title {
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 20px;
+    color: #fff;
+}
+
 .mypage_func_wrap {
     padding: 39px 0;
     background-color: #f5f5f5;
@@ -1763,19 +1811,56 @@ caption {
     margin-top: 36px;
 }
 
+.mypage_func_wrap > div {
+    text-align: center;
+    padding: 11px;
+}
+
+.mypage_func_wrap > div label {
+    font-size: 18px;
+    line-height: 42px;
+    color: #666;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.mypage_func_wrap > div input[type="text"] {
+    width: 358px;
+    height: 40px;
+    margin-left: 10px;
+    padding: 0 10px;
+    font-size: 13px;
+    border: 1px solid #bbbbbb;
+    color: #666666;
+    vertical-align: top;
+    border-right: none;
+}
+
+.mypage_func_wrap > div a {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #3d3d3d;
+    background: #5d5d5d;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    vertical-align: top;
+}
+
 .mypage_aside h3 {
     font-size: 20px;
     color: #6ca435;
     line-height: 1;
     padding: 30px 8px;
     box-sizing: border-box;
+    border-bottom: 1px solid #e2e2e2;
 }
 
-.mypage_aside > ul {
-    border-top: 1px solid #e2e2e2;
-}
-
-.mypage_aside > ul > li {
+.mypage_aside>ul>li {
     font-size: 17px;
     line-height: 30px;
     color: #333;
@@ -1783,28 +1868,28 @@ caption {
     padding: 17px 8px;
 }
 
-.mypage_aside > ul > li.selected {
+.mypage_aside>ul>li.selected {
     font-weight: bold;
 }
 
-.mypage_aside > ul > li a {
+.mypage_aside>ul>li a {
     display: block;
     width: 100%;
     height: 100%;
     color: #333;
 }
 
-.mypage_aside > ul > li ul {
+.mypage_aside>ul>li ul {
     padding: 3px 0;
     border-top: 0;
     display: none;
 }
 
-.mypage_aside > ul > li.selected ul {
+.mypage_aside>ul>li.selected ul {
     display: block;
 }
 
-.mypage_aside > ul > li ul li {
+.mypage_aside>ul>li ul li {
     font-size: 14px;
     border-bottom: 0;
     color: #666;
@@ -1812,18 +1897,18 @@ caption {
     font-weight: normal;
 }
 
-.mypage_aside > ul > li ul li.selected {
+.mypage_aside>ul>li ul li.selected {
     font-weight: bold;
 }
 
-.mypage_aside > ul > li ul li a {
+.mypage_aside>ul>li ul li a {
     display: block;
     width: 100%;
     height: 100%;
     color: #666;
 }
 
-.mypage_list_block + .mypage_list_block {
+.mypage_list_block+.mypage_list_block {
     margin-top: 50px;
 }
 
@@ -1845,7 +1930,7 @@ caption {
     font-weight: normal;
 }
 
-.mypage_list_block h4 a {
+.mypage_list_block h4 .more {
     width: 18px;
     height: 18px;
     display: block;
@@ -1857,6 +1942,21 @@ caption {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 18px;
+}
+
+.mypage_list_block h4 .link {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    background-color: #888;
+    border: 1px solid #777;
+    color: #fff;
+    display: inline-block;
+    line-height: 24px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: normal;
+    padding: 0 10px;
 }
 
 .mypage_list_block .order_list {
@@ -1873,18 +1973,18 @@ caption {
     font-weight: normal;
 }
 
-.order_list > li {
+.order_list>li {
     width: 100%;
     height: 154px;
     box-sizing: border-box;
     display: table-row;
 }
 
-.order_list > li + li {
+.order_list>li+li {
     border-top: 1px solid #e5e5e5;
 }
 
-.order_list li > a {
+.order_list li>a {
     display: table-cell;
     width: 559px;
     vertical-align: middle;
@@ -1929,7 +2029,7 @@ caption {
     line-height: 20px;
 }
 
-.order_list_info li + li {
+.order_list_info li+li {
     margin-top: 8px;
 }
 
@@ -1964,7 +2064,7 @@ caption {
     color: #666;
 }
 
-.order_btn_wrap a + a {
+.order_btn_wrap a+a {
     margin-top: 4px
 }
 
@@ -1987,4 +2087,521 @@ caption {
 .mypage_list_block .wish_list img {
     width: 117px;
     height: 117px;
+}
+
+.ship_process ul {
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 2px solid #6ca435;
+    text-align: center;
+    background: #f8f8f8;
+    padding: 38px 0 0;
+    height: 190px;
+    box-sizing: border-box;
+}
+
+.ship_process ul li {
+    width: 138px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.ship_process ul li+li {
+    margin-left: 12px;
+    background-image: url(/img/assets/step_arrow.png);
+    background-position: left 6px;
+    background-repeat: no-repeat;
+}
+
+.ship_process ul li i {
+    color: #81BE04;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.ship_process ul li span {
+    display: block;
+    font-size: 16px;
+    line-height: 16px;
+    color: #666;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.ship_process ul li p {
+    margin-top: 15px;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: -0.05em;
+    font-family: '돋움', 'dotum';
+    color: #999;
+}
+
+.mypage_order_guide .guide_block+.guide_block {
+    margin-top: 45px;
+}
+
+.mypage_order_guide .guide_block p {
+    font-size: 14px;
+    line-height: 23px;
+    color: #333;
+    font-weight: bold;
+}
+
+.mypage_order_guide .guide_block li {
+    position: relative;
+    padding-left: 10px;
+    font-size: 13px;
+    line-height: 23px;
+    color: #666;
+    text-indent: -8px;
+}
+
+.mypage_order_guide .guide_block ol {
+    padding-left: 1.3em;
+}
+
+.mypage_order_guide .guide_block ol+p {
+    margin-top: 23px;
+}
+
+.mypage_order_guide .guide_block ol li {
+    list-style-type: decimal !important;
+    list-style-position: inside;
+}
+
+.mypage_guide_table {
+    margin-top: 20px;
+    background: #f8f8f8;
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 2px solid #6ca435;
+}
+
+.mypage_guide_table table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.mypage_guide_table thead th {
+    text-align: center;
+    height: 50px;
+    font-size: 14px;
+    color: #666;
+    letter-spacing: -0.05em;
+    font-weight: normal;
+    text-align: center;
+}
+
+.mypage_guide_table tbody th {
+    font-size: 14px;
+    color: #666;
+    border-left: 0;
+    text-align: center;
+    font-weight: normal;
+    border-top: 1px solid #e2e2e2;
+}
+
+.mypage_guide_table tbody td {
+    border-top: 1px solid #e2e2e2;
+    border-left: 1px solid #e2e2e2;
+}
+
+.mypage_guide_table tbody th,
+.mypage_guide_table tbody td {
+    padding: 25px 20px;
+}
+
+
+
+.mypage_guide_table tbody tr td:first-child {
+    border-left: none;
+}
+
+.mypage_table table {
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 0px;
+}
+
+.mypage_table thead th {
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: normal;
+    font-size: 14px;
+    color: #666;
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #bbb;
+}
+
+.mypage_table tbody td {
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    color: #666;
+    padding: 20px 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.mypage_table tbody .answer_row td {
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+.mypage_table tbody td.mypage_table_product {
+    text-align: left;
+}
+
+.mypage_table tbody td em {
+    font-size: 12px;
+    line-height: 20px;
+    color: #666;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 10px;
+    font-style: normal;
+}
+
+.mypage_table tbody td .dcrate {
+    display: block;
+    color: #e53433;
+    font-style: normal;
+}
+
+.mypage_table tbody td b {
+    color: #333;
+    font-size: 14px;
+}
+
+.mypage_table tbody td.aligh_left {
+    text-align: left;
+}
+
+.mypage_table tbody td.aligh_left a {
+    color: inherit;
+}
+
+.mypage_table tbody td .add_basket, .mypage_table tbody td .del_wish {
+    height: 26px;
+    line-height: 24px;
+    border: 1px solid #bbb;
+    font-size: 12px;
+    text-align: center;
+    padding: 0 10px;
+    display: block;
+}
+
+.mypage_table tbody td .add_basket {
+    background-color: #f6f6f6;
+    color: #666;
+}
+
+.mypage_table tbody td .del_wish {
+    background-color: #bbb;
+    color: #fff;
+    border-color: #bbb;
+}
+
+.mypage_table tbody td a + a {
+    margin-top: 4px;
+}
+
+.mypage_table tbody td strong {
+    height: 158px;
+    line-height: 158px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    display: block;
+    padding: 50px 0;
+    font-weight: normal;
+}
+
+.mypage_table table input[type="checkbox"] {
+    display: none;
+}
+
+.mypage_table table input[type="checkbox"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    background: url(/img/assets/checkbox_icon_off.png) no-repeat 0 0;
+}
+
+.mypage_table table input[type="checkbox"]:checked + label {
+    background: url(/img/assets/checkbox_icon_on.png) no-repeat 0 0;
+}
+
+.mypage_table img {
+    width: 70px;
+    height: 70px;
+    vertical-align: middle;
+}
+
+.mypage_table_btn_wrap {
+    margin-top: 20px;
+}
+
+.mypage_table_btn_wrap a {
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #f6f6f6;
+    color: #666;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 24px;
+    border: 1px solid #bbb;
+    text-align: center;
+}
+
+.mypage_table_btn_wrap a + a {
+    margin-left: 6px;
+}
+
+.mypage_section_dec {
+    margin-bottom: 50px;
+}
+
+.mypage_section_dec ul {
+    border-top: 2px solid #6ca435;
+    padding: 20px 30px;
+    background-color: #f5f5f5;
+}
+
+.mypage_section_dec ul li {
+    font-size: 12px;
+    line-height: 20px;
+    padding-left: 10px;
+    color: #666;
+    text-indent: -8px;
+}
+
+.mypage_form_wrap {
+    border-top: 2px solid #6ca435;
+}
+
+.mypage_form_wrap th, .mypage_form_wrap td {
+    text-align: left;
+    padding: 13px 20px;
+    border-bottom: 1px solid #e2e2e2;
+    font-size: 14px;
+    line-height: 27px;
+    color: #333;
+    vertical-align: middle;
+}
+
+.mypage_form_wrap td {
+    color: #666;
+}
+
+.mypage_form_wrap td input[type="text"], .mypage_form_wrap td input[type="email"] {
+    border: 1px solid #bababa;
+    width: 255px;
+    height: 27px;
+    padding: 0 5px;
+    vertical-align: top;
+}
+
+.mypage_form_wrap td input[type="text"]:disabled {
+    background-color: #f5f5f5;
+    color: #000;
+}
+
+.mypage_form_wrap td input[type="text"] + label, .mypage_form_wrap td input[type="email"] + label {
+    display: none;
+}
+
+.mypage_form_wrap td div + div {
+    margin-top: 10px;
+}
+
+.mypage_form_wrap td label + input[type="text"] {
+    margin-left: 6px;
+}
+
+.mypage_form_wrap td a {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 0 11px;
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: -0.06em;
+    background: #bababa;
+    height: 27px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #bbb;
+}
+
+.mypage_form_wrap td em {
+    color: #333;
+    font-size: 14px;
+    line-height: 27px;
+    font-style: normal;
+}
+
+.mypage_form_wrap td span {
+    font-size: 12px;
+    line-height: 16px;
+    color: #666;
+    margin-top: 8px;
+    display: block;
+}
+
+.mypage_form_radio_wrap {
+    font-size: 0px;
+}
+
+.mypage_form_radio_wrap li {
+    display: inline-block;
+}
+
+.mypage_form_radio_wrap li + li {
+    margin-left: 20px;
+}
+
+.mypage_form_radio_wrap input + label {
+    background-image: url(/img/assets/radio_normal.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 19px;
+    line-height: 20px;
+    height: 20px;
+    font-size: 16px;
+    margin-right: 10px;
+    padding-left: 22px;
+}
+
+.mypage_form_radio_wrap input:checked + label {
+    background-image: url(/img/assets/radio_selected.png);
+}
+
+.mypage_form_btn_wrap {
+    text-align: center;
+    font-size: 0px;
+    margin-top: 50px;
+}
+
+.mypage_form_btn_wrap a {
+    width: 126px;
+    background-color: #f6f6f6;
+    height: 38px;
+    line-height: 38px;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    color: #666;
+    border: 1px solid #bbb;
+}
+
+.mypage_form_btn_wrap a.im {
+    background: #e53433;
+    border-color: #e53433;
+    color: #fff;
+}
+
+.mypage_form_btn_wrap a + a {
+    margin-left: 20px;
+}
+
+.mypage_help_section > p {
+    font-size: 13px;
+    color: #666;
+    font-weight: 100;
+}
+
+.mypage_help_section .bold_border {
+    border: solid 5px #e2e2e2;
+    height: 150px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.mypage_help_section .bold_border li {
+    float: left;
+    border-right: solid 1px #e2e2e2;
+    margin: 20px 0;
+    height: 70%;
+    width: 50%;
+    padding-left: 30px;
+    box-sizing: border-box;
+    color: #666;
+}
+
+.mypage_help_section .bold_border li + li {
+    border: none;
+}
+
+.mypage_help_section .bold_border li em {
+    font-size: 14px;
+    line-height: 40px;
+    font-style: normal;
+    display: block;
+}
+
+.mypage_help_section .bold_border li p {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 30px;
+    margin-bottom: 5px;
+}
+
+.mypage_help_section .bold_border li strong {
+    font-size: 12px;
+    line-break: 140%;
+    font-weight: normal;
+}
+
+.mypage_help_section .bold_border li div {
+    font-size: 0;
+}
+
+.mypage_help_section .bold_border li div a {
+    background-color: #6ea264;
+    width: 120px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 28px;
+    float: left;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.mypage_help_section .bold_border li div a + a {
+    margin-left:5px; 
+}
+
+.help_faq_list_li ul {
+    font-size: 0px;
+    text-align: center;
+    padding: 43px 0 46px 0px;
+}
+
+.help_faq_list_li ul li {
+    display: inline-block;
+    margin: 0 9px 15px 0;
+}
+
+.help_faq_list_li ul li:nth-child(5n) {
+    margin-right: 0;
+}
+
+.help_faq_list_li ul li a{
+    float: left;
+    width: 149px;
+    height: 134px;
+    padding-top: 92px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    background: url(/img/assets/help_icon.png) no-repeat;
 }
