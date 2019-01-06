@@ -372,7 +372,7 @@ caption {
     margin-top: 20px;
 }
 
-.paging_wrap ol{
+.paging_wrap ol {
     display: inline-block;
 }
 
@@ -627,8 +627,6 @@ caption {
     color: #e53433;
     font-weight: bold;
 }
-
-.list_style4 {}
 
 .list_style4 ul {
     font-size: 0px;
@@ -1097,8 +1095,6 @@ caption {
     margin-bottom: 60px;
 }
 
-.direct_slide {}
-
 .direct_slide_item {
     width: 600px;
     height: 400px;
@@ -1121,7 +1117,6 @@ caption {
 }
 
 .direct_slide_copy_wrap {
-    float: left;
     display: inline-block;
     padding: 80px 0
 }
@@ -1301,8 +1296,6 @@ caption {
     bottom: 0;
 }
 
-.main_bottom_info_col table td {}
-
 .main_bottom_info_col table td p {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1339,7 +1332,6 @@ caption {
 
 .main_bottom_info_col li img {
     display: block;
-    vertical-align: top;
     margin: 0 auto;
     margin-bottom: 5px;
 }
@@ -1697,11 +1689,13 @@ caption {
 }
 
 .mypage_top .mypage_func_wrap.option_mypage {
-    height: 240px;;
+    height: 240px;
+    ;
 }
 
 .mypage_top .mypage_func_wrap.option_help {
-    height: 141px;;
+    height: 141px;
+    ;
 }
 
 .mypage_aside {
@@ -1811,12 +1805,12 @@ caption {
     margin-top: 36px;
 }
 
-.mypage_func_wrap > div {
+.mypage_func_wrap>div {
     text-align: center;
     padding: 11px;
 }
 
-.mypage_func_wrap > div label {
+.mypage_func_wrap>div label {
     font-size: 18px;
     line-height: 42px;
     color: #666;
@@ -1824,7 +1818,7 @@ caption {
     display: inline-block;
 }
 
-.mypage_func_wrap > div input[type="text"] {
+.mypage_func_wrap>div input[type="text"] {
     width: 358px;
     height: 40px;
     margin-left: 10px;
@@ -1836,7 +1830,7 @@ caption {
     border-right: none;
 }
 
-.mypage_func_wrap > div a {
+.mypage_func_wrap>div a {
     display: inline-block;
     width: 120px;
     height: 40px;
@@ -1877,6 +1871,10 @@ caption {
     width: 100%;
     height: 100%;
     color: #333;
+}
+
+.mypage_aside>ul>li a:hover {
+    text-decoration: underline;
 }
 
 .mypage_aside>ul>li ul {
@@ -2282,7 +2280,12 @@ caption {
     color: inherit;
 }
 
-.mypage_table tbody td .add_basket, .mypage_table tbody td .del_wish {
+.mypage_table tbody td.aligh_left a:hover {
+    text-decoration: underline;
+}
+
+.mypage_table tbody td .add_basket,
+.mypage_table tbody td .del_wish {
     height: 26px;
     line-height: 24px;
     border: 1px solid #bbb;
@@ -2303,7 +2306,7 @@ caption {
     border-color: #bbb;
 }
 
-.mypage_table tbody td a + a {
+.mypage_table tbody td a+a {
     margin-top: 4px;
 }
 
@@ -2322,7 +2325,7 @@ caption {
     display: none;
 }
 
-.mypage_table table input[type="checkbox"] + label {
+.mypage_table table input[type="checkbox"]+label {
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -2333,7 +2336,7 @@ caption {
     background: url(/img/assets/checkbox_icon_off.png) no-repeat 0 0;
 }
 
-.mypage_table table input[type="checkbox"]:checked + label {
+.mypage_table table input[type="checkbox"]:checked+label {
     background: url(/img/assets/checkbox_icon_on.png) no-repeat 0 0;
 }
 
@@ -2359,7 +2362,7 @@ caption {
     text-align: center;
 }
 
-.mypage_table_btn_wrap a + a {
+.mypage_table_btn_wrap a+a {
     margin-left: 6px;
 }
 
@@ -2385,7 +2388,8 @@ caption {
     border-top: 2px solid #6ca435;
 }
 
-.mypage_form_wrap th, .mypage_form_wrap td {
+.mypage_form_wrap th,
+.mypage_form_wrap td {
     text-align: left;
     padding: 13px 20px;
     border-bottom: 1px solid #e2e2e2;
@@ -2399,7 +2403,8 @@ caption {
     color: #666;
 }
 
-.mypage_form_wrap td input[type="text"], .mypage_form_wrap td input[type="email"] {
+.mypage_form_wrap td input[type="text"],
+.mypage_form_wrap td input[type="email"] {
     border: 1px solid #bababa;
     width: 255px;
     height: 27px;
@@ -2412,15 +2417,16 @@ caption {
     color: #000;
 }
 
-.mypage_form_wrap td input[type="text"] + label, .mypage_form_wrap td input[type="email"] + label {
+.mypage_form_wrap td input[type="text"]+label,
+.mypage_form_wrap td input[type="email"]+label {
     display: none;
 }
 
-.mypage_form_wrap td div + div {
+.mypage_form_wrap td div+div {
     margin-top: 10px;
 }
 
-.mypage_form_wrap td label + input[type="text"] {
+.mypage_form_wrap td label+input[type="text"] {
     margin-left: 6px;
 }
 
@@ -2461,11 +2467,11 @@ caption {
     display: inline-block;
 }
 
-.mypage_form_radio_wrap li + li {
+.mypage_form_radio_wrap li+li {
     margin-left: 20px;
 }
 
-.mypage_form_radio_wrap input + label {
+.mypage_form_radio_wrap input+label {
     background-image: url(/img/assets/radio_normal.png);
     background-repeat: no-repeat;
     background-position: left center;
@@ -2477,7 +2483,7 @@ caption {
     padding-left: 22px;
 }
 
-.mypage_form_radio_wrap input:checked + label {
+.mypage_form_radio_wrap input:checked+label {
     background-image: url(/img/assets/radio_selected.png);
 }
 
@@ -2505,11 +2511,11 @@ caption {
     color: #fff;
 }
 
-.mypage_form_btn_wrap a + a {
+.mypage_form_btn_wrap a+a {
     margin-left: 20px;
 }
 
-.mypage_help_section > p {
+.mypage_help_section>p {
     font-size: 13px;
     color: #666;
     font-weight: 100;
@@ -2533,7 +2539,7 @@ caption {
     color: #666;
 }
 
-.mypage_help_section .bold_border li + li {
+.mypage_help_section .bold_border li+li {
     border: none;
 }
 
@@ -2574,8 +2580,12 @@ caption {
     margin-top: 10px;
 }
 
-.mypage_help_section .bold_border li div a + a {
-    margin-left:5px; 
+.mypage_help_section .bold_border li div a:hover {
+    text-decoration: underline;
+}
+
+.mypage_help_section .bold_border li div a+a {
+    margin-left: 5px;
 }
 
 .help_faq_list_li ul {
@@ -2593,7 +2603,7 @@ caption {
     margin-right: 0;
 }
 
-.help_faq_list_li ul li a{
+.help_faq_list_li ul li a {
     float: left;
     width: 149px;
     height: 134px;
@@ -2605,3 +2615,366 @@ caption {
     display: block;
     background: url(/img/assets/help_icon.png) no-repeat;
 }
+
+.help_tab ul {
+    border: solid 1px #e2e2e2;
+    margin-bottom: 25px;
+}
+
+.help_tab ul li {
+    display: inline-block;
+    height: 90px;
+    border-right: solid 1px #e2e2e2;
+    background-repeat: no-repeat;
+    background-position: center 12px;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+}
+
+.help_tab.col6 ul li {
+    width: 129px;
+}
+
+.help_tab.col3 ul li {
+    width: 260px;
+}
+
+.help_tab ul li.selected {
+    background-color: #fff;
+    border-bottom: solid 4px #6ca435;
+}
+
+.help_tab ul li.best {
+    background-image: url(/img/assets/faq_icon1_off.png);
+}
+
+.help_tab ul li.member {
+    background-image: url(/img/assets/faq_icon2_off.png);
+}
+
+.help_tab ul li.order {
+    background-image: url(/img/assets/faq_icon3_off.png);
+}
+
+.help_tab ul li.deliver {
+    background-image: url(/img/assets/faq_icon4_off.png);
+}
+
+.help_tab ul li.cancel {
+    background-image: url(/img/assets/faq_icon5_off.png);
+}
+
+.help_tab ul li.service {
+    background-image: url(/img/assets/faq_icon6_off.png);
+}
+
+.help_tab ul li:last-child {
+    border-right: none;
+}
+
+.help_tab ul li.selected.best {
+    background-image: url(/img/assets/faq_icon1_on.png);
+}
+
+.help_tab ul li.selected.member {
+    background-image: url(/img/assets/faq_icon2_on.png);
+}
+
+.help_tab ul li.selected.order {
+    background-image: url(/img/assets/faq_icon3_on.png);
+}
+
+.help_tab ul li.selected.deliver {
+    background-image: url(/img/assets/faq_icon4_on.png);
+}
+
+.help_tab ul li.selected.cancel {
+    background-image: url(/img/assets/faq_icon5_on.png);
+}
+
+.help_tab ul li.selected.service {
+    background-image: url(/img/assets/faq_icon6_on.png);
+}
+
+.help_tab ul li.selected:last-child {
+    border-right: none;
+}
+
+.help_tab ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #4c4c4c;
+    text-align: center;
+    font-size: 14px;
+    line-height: 130px;
+}
+
+.help_tab ul li a:hover {
+    text-decoration: underline;
+}
+
+.help_tab ul li.selected a {
+    color: #6ca435;
+}
+
+.faq_board li {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.faq_board li .question a {
+    position: relative;
+    display: block;
+    background: url(/img/assets/faq_arrow.png) no-repeat 746px 50%;
+    line-height: 49px;
+    font-size: 15px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0 65px 0 10px;
+}
+
+.faq_board li.selected .question a {
+    background: url(/img/assets/faq_arrow_on.png) no-repeat 746px 50%;
+}
+
+.faq_board li .question a span {
+    background-image: url(/img/assets/faq_q.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    width: 25px;
+    height: 49px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.faq_board li .answer {
+    display: none;
+    position: relative;
+    min-height: 25px;
+    padding: 15px 25px 15px 75px;
+    background: #f9f9f9;
+    border-top: 1px solid #ddd;
+    line-height: 25px;
+    font-size: 15px;
+    color: #333333;
+    position: relative;
+}
+
+.faq_board li .answer_area::before {
+    content: "";
+    width: 16px;
+    height: 20px;
+    display: block;
+    background-image: url(/img/assets/faq_a.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 20px;
+    position: absolute;
+    top: 15px;
+    left: 45px;
+}
+
+.faq_board li.selected .answer {
+    display: block;
+}
+
+.help_tab_con_block {
+    display: none;
+}
+
+.help_tab_con_block.selected {
+    display: block;
+}
+
+.help_tab_con_block p {
+    font-size: 13px;
+    color: #666666;
+    line-height: 20px;
+}
+
+.help_tab_con_block p span {
+    color: #6ca435;
+}
+
+.help_table {
+    border-top: 1px solid #e5e5e5;
+    margin-top: 20px;
+}
+
+.help_table table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.help_table th,
+.help_table td {
+    font-size: 13px;
+    border-bottom: solid 1px #e5e5e5;
+}
+
+.help_table th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+    padding-left: 25px;
+    text-align: left;
+    color: #333333;
+    line-height: 140%;
+}
+
+.help_table td {
+    padding: 15px;
+    line-height: 20px;
+    color: #666
+}
+
+.help_table td span {
+    color: #6ca435;
+}
+
+.help_table td .help_table_btn {
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    padding: 0 10px;
+    background-color: #6ea264;
+    margin-top: 10px;
+}
+
+.help_table td img {
+    vertical-align: top;
+}
+
+.self_bx {
+    border: solid 3px #e5e5e5;
+    height: 120px;
+    margin-top: 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.self_bx em {
+    padding-top: 32px;
+    font-size: 15px;
+    font-style: normal;
+    display: block;
+    color: #666;
+}
+
+.self_bx a {
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    padding: 0 10px;
+    background-color: #6ea264;
+    margin-top: 10px;
+    padding: 5px 15px;
+}
+
+.mypage_board_title {
+    position: relative;
+}
+
+.mypage_board_title h4 {
+    font-size: 17px;
+    line-height: 28px;
+    color: #333;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+.notice_search_area {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+.notice_search_area input {
+    width: 185px;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 5px;
+    margin-right: 3px;
+    border: 1px solid #bbbbbb;
+    vertical-align: top;
+}
+
+.notice_search_area a {
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    color: #fff;
+    padding: 0 23px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #5d5d5d;
+    background-color: #5d5d5d;
+    vertical-align: top;
+}
+
+.notice_detail_title {
+    text-align: center;
+    border-bottom: 1px solid #bbbbbb;
+}
+
+.notice_detail_title h2 {
+    width: 95%;
+    margin: 0 auto;
+    color: #333333;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.notice_detail_title span {
+    display: block;
+    text-align: right;
+    color: #666666;
+    font-size: 14px;
+    line-height: 30px;
+    padding-right: 24px;
+    box-sizing: border-box;
+}
+
+.notice_detail {
+    color: #333333;
+    font-size: 14px;
+    line-height: 160%;
+    font-weight: normal;
+    border-bottom: 1px solid #bbbbbb;
+    padding: 40px 0;
+}
+
+.notice_detail_btn {
+    padding: 30px 0 0 0;
+    text-align: center;
+}
+
+.notice_detail_btn a {
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    color: #fafafa;
+    background: #6ca435;
+    padding: 0 47px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #bbbbbb;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*장바구니*/

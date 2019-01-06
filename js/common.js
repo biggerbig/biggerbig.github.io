@@ -91,5 +91,14 @@ $('.main_cate_tab>ul>li').click(function(){
     $('.main_cate_tab>ul>li').removeClass('selected');
     $('.tab_list').removeClass('selected');
     $(this).addClass('selected')
-    $('.cate_tab' +tabname + '_list').addClass('selected')
+    $('.cate_tab' +tabname + '_list').addClass('selected');
+})
+
+// 고객센터 이용안내 탭
+$('.itrt_tab>li').click(function(){
+    var tabname2 = $(this).attr('id');
+    $('.itrt_tab>li').removeClass('selected');
+    $('.help_tab_con_block').removeClass('selected');
+    $(this).addClass('selected')
+    $('#' + tabname2 + '_con').addClass('selected');
 })
