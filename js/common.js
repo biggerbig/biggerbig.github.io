@@ -85,6 +85,27 @@ $(".d3dnext").click(function () {
 });
 
 
+//best 슬라이드
+var bestcarousel = $(".best_carousel_slide");
+bestcarousel.owlCarousel({
+    items: 3,
+    center: false,
+    autoplay: true,
+    autoplayHoverPause: true,
+    autoplaySpeed: 1000,
+    loop: true,
+    dots: false,
+    margin: 75,
+    slideBy: 3
+});
+$(".bstprev").click(function () {
+    bestcarousel.trigger('prev.owl.carousel');
+});
+$(".bstnext").click(function () {
+    bestcarousel.trigger('next.owl.carousel');
+});
+
+
 // 메인 화면 오아시스 인기상품 탭
 $('.main_cate_tab>ul>li').click(function(){
     var tabname = $(this).attr('data-tab');
