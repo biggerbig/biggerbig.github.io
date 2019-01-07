@@ -123,12 +123,14 @@
     <div id="container">
         <div class="order_step_wrap">
             <div class="order_step_img">
-                <img src="/img/assets/order_step1.png" alt="장바구니" />
+                <img src="/img/assets/order_step3.png" alt="장바구니" />
+                <p style="background-color:#f5f5f5; height:58px; line-height: 58px; color:#6ca437; font-size:16px; font-weight:bold;text-align:center;">상품
+                    주문은 배송비를 제외한 실 결제금액 10,000원 이상부터 가능합니다.</p>
             </div>
             <div class="order_step_block">
                 <div class="order_step_title">
-                    <h3>장바구니 상품<span>1</span>건</h3>
-                    <i>장바구니에 담긴 상품은 14일간 보관되며 이후 찜목록으로 이동됩니다.</i>
+                    <h3>주문 상품<span>1</span>건</h3>
+                    <i>새벽배송이나 매장배송으로 산지직송 상품을 주문하시는경우 산지에서 별도로 직송합니다.</i>
                 </div>
                 <div class="basket_wrap">
                     <div class="product_table">
@@ -142,26 +144,21 @@
                                 <col width="95px">
                                 <col width="109px">
                                 <col width="100px">
-                                <col width="110px">
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th scope="col"><input type="checkbox" id="order_all" checked="checked"><label for="order_all"></label></th>
+                                    <th scope="col">No.</th>
                                     <th>상품정보</th>
                                     <th>판매가</th>
                                     <th>할인금액</th>
                                     <th>수량</th>
                                     <th>구매가</th>
                                     <th>배송정보</th>
-                                    <th>주문하기</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>
-                                        <input type="checkbox" id="order_00" checked="checked">
-                                        <label for="order_00"></label></span>
-                                    </td>
+                                    <td>1</td>
                                     <td scope="row" class="align_left">
                                         <a href="#"><img src="/img/demo/liststyle1_sample.jpg" alt="상품명" class="p_thumb">정갈한
                                             창난젓</a>
@@ -172,29 +169,14 @@
                                     <td>8,500</td>
                                     <td>1,700<p><em>[20%]</em></p>
                                     </td>
-                                    <td>
-                                        <div class="table_quantity_wrap">
-                                            <input type="text" value="1" class="quantity">
-                                            <a href="#" class="quantity_up"><img src="/img/assets/quantity_up.png" alt="수량 추가"></a>
-                                            <a href="#" class="quantity_down"><img src="/img/assets/quantity_down.png"
-                                                    alt="수량 감소"></a>
-                                        </div>
-                                        <a href="#" class="update_quantity">변경</a>
-                                    </td>
+                                    <td>1</td>
                                     <td class="buy_price">6,800</td>
-                                    <td rowspan="1">
+                                    <td rowspan="2" class="merge_row">
                                         <p class="ship_price">3,000</p>
-                                    </td>
-                                    <td class="order_btn_wrap">
-                                        <a href="#">찜하기</a>
-                                        <a href="#">삭제</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <input type="checkbox" id="order_01" checked="checked">
-                                        <label for="order_01"></label></span>
-                                    </td>
+                                    <td>2</td>
                                     <td scope="row" class="align_left">
                                         <a href="#"><img src="/img/demo/liststyle1_sample.jpg" alt="상품명" class="p_thumb">정갈한
                                             창난젓</a>
@@ -205,23 +187,8 @@
                                     <td>8,500</td>
                                     <td>1,700<p><em>[20%]</em></p>
                                     </td>
-                                    <td>
-                                        <div class="table_quantity_wrap">
-                                            <input type="text" value="1" class="quantity">
-                                            <a href="#" class="quantity_up"><img src="/img/assets/quantity_up.png" alt="수량 추가"></a>
-                                            <a href="#" class="quantity_down"><img src="/img/assets/quantity_down.png"
-                                                    alt="수량 감소"></a>
-                                        </div>
-                                        <a href="#" class="update_quantity">변경</a>
-                                    </td>
+                                    <td>1</td>
                                     <td class="buy_price">6,800</td>
-                                    <td rowspan="1">
-                                        <p class="ship_price">3,000</p>
-                                    </td>
-                                    <td class="order_btn_wrap">
-                                        <a href="#">찜하기</a>
-                                        <a href="#">삭제</a>
-                                    </td>
                                 </tr>
                             </tbody>
                             <tfoot>
@@ -239,38 +206,153 @@
                         </table>
                     </div>
                 </div>
-                <div class="basket_btn_wrap">
-                    <a href="#">전체선택</a>
-                    <a href="#">선택상품 찜하기</a>
-                    <a href="#">선택삭제</a>
+            </div>
+            <div class="order_step_block" style="margin-top: 50px;">
+                <div class="order_step_title">
+                    <h3>결제수단</h3>
+                </div>
+                <div class="order_inner_wrap" style="background-color: #f5f5f5;">
+                    <div class="order_inner_left">
+                        <h4>포인트/혜택사용하기</h4>
+                        <div class="order_inner_table">
+                            <table>
+                                <caption>포인트/혜택사용하기</caption>
+                                <colgroup>
+                                    <col width="140px">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>포인트 사용</th>
+                                        <td>
+                                            <input type="text" id="point" value="0" />
+                                            <label for="point">포인트</label>
+                                            <img src="/img/assets/point_icon.png" />
+                                            <input type="checkbox" id="usage_point" />
+                                            <label for="usage_point">보유포인트 (0P)</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>쿠폰 사용</th>
+                                        <td>
+                                            <select>
+                                                <option>사용안함</option>
+                                                <option>보유쿠폰 표시</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h4>결제방법</h4>
+                        <div class="order_inner_table">
+                            <table>
+                                <caption>결제 방법</caption>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="radio" id="credit" name="payment_method" checked />
+                                            <label for="credit">신용카드</label>
+                                            <input type="radio" id="banking" name="payment_method" />
+                                            <label for="banking">무통장 입금(가상계좌)</label>
+                                            <input type="radio" id="mobile" name="payment_method" />
+                                            <label for="mobile">휴대폰결제</label>
+                                            <input type="radio" id="kakao" name="payment_method" />
+                                            <label for="kakao">kakaoPay</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="payment_info">
+                                <ul>
+                                    <li>오아시스에서 휴대폰으로 결제 가능한 최대 금액은 월 30만원이나, 개인별 한도금액은 통신사 및 개인 설정에 따라 <br>다를 수 있습니다.</li>
+                                    <li>휴대폰으로 결제하신 금액은 익월 휴대폰 요금에 함께 청구되며 별도의 수수료는 부과되지 않습니다.</li>
+                                    <li>휴대폰 소액결제로 구매하실 경우 현금영수증이 발급되지 않습니다.
+                                        <ul>
+                                            <li>미납/체납중인 휴대폰 요금이 있을 경우</li>
+                                            <li>이동통신사 가입기간(번호이동포함) 6개월 이하인 경우</li>
+                                            <li>외국인, 미성년자 요금제, 법인휴대폰, 선불요금제인 경우</li>
+                                            <li>LGT 이용자 중 통신사로 [자동결제] 차단 신청하신 경우</li>
+                                        </ul>
+                                    </li>
+                                    <li>휴대폰 소액결제로 결제하신 상품을 취소할 경우 결제하신 당월 말까지 가능합니다.</li>
+                                    <li>휴대폰결제관련 문의사항은 LG유플러스전자결제 고객센터 1544-7772 또는 오아시스 고객센터 1577-0098으로 <br>연락주시기
+                                        바랍니다.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="order_inner_right">
+                        <h4>미출고시 조치방법</h4>
+                        <div>
+                            <input type="radio" id="refund_point" name="refund_method" checked />
+                            <label for="refund_point">포인트 환불<br>(미출고 상품가의 5% 추가 보상 지급)</label>
+                            <input type="radio" id="refund_banking" name="refund_method" />
+                            <label for="refund_banking">결제수단으로 환불</label>
+                            <input type="radio" id="refund_exchange" name="refund_method" />
+                            <label for="refund_exchange">대체상품으로 교환<br>대체상뭄이 없을 경우, 포인트로 환불해 드립니다)</label>
+                            <input type="radio" id="refund_delay" name="refund_method" />
+                            <label for="refund_delay">다음날 결품없이 전품목 함께 받기</label>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="order_step_block">
-                <div class="total_order_wrap">
-                    <div class="total_order_top">
-                        <strong>총 주문금액</strong>
+                <div class="order_step_title">
+                    <h3>주문서 동의</h3>
+                </div>
+                <div class="order_inner_wrap" style="margin-bottom: 0;">
+                    <div class="order_inner_left">
+                        <h4>주문서 동의</h4>
+                        <div class="order_inner_table">
+                            <table>
+                                <caption>주문서 동의</caption>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" />
+                                            <label>주문할 상품의 상품명, 가격, 배송정보를 확인하였으며, 구매에 동의합니다.(전자상거래법 제8조
+                                                제2항)</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h4>꼭 확인하세요.</h4>
+                        <div class="payment_info">
+                            <ul>
+                                <li><span>신규 회원 가입선물은 첫 구매 3만원 이상 결제시 드립니다.</span></li>
+                                <li>구매 후 품절로 인하여 카드 취소/환불/입금등이 필요한 경우, 고객님의 불편을 최소화 하기 위해 결제금액의 5%를 포인트로 보상해 드리고 있습니다.
+                                    (품절로 인한 포인트 환불 시 5%추가 보상지급)<br>
+                                    적립 추가 5%+환불금액은 마이페이지에서 확인가능합니다.</li>
+                                <li>포인트 보상 대신 결제 부분 취소를 원하시는 경우 1:1 고객센터에 메모 남겨주시면 24시간 이내에 취소하여 드리겠습니다. (핸드폰 결제 또는
+                                    안심결제시는 제외)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="order_inner_right">
+                        <h4>최종 결제금액</h4>
                         <dl>
                             <dt>총 상품금액</dt>
                             <dd><span>0</span>원</dd>
-                            <dt>할인금액</dt>
+                            <dt>포인트 사용금액</dt>
                             <dd><span>0</span>원</dd>
-                            <dt>배송비</dt>
+                            <dt>쿠폰 적용금액</dt>
+                            <dd><span>0</span>원</dd>
+                            <dt>총 배송비</dt>
+                            <dd><span>0</span>원</dd>
+                        </dl>
+                        <dl class="total_order_price">
+                            <dt>최종 결제금액</dt>
                             <dd><span>0</span>원</dd>
                         </dl>
                     </div>
-                    <div class="total_order_bottom">
-                        <dl>
-                            <dt>결제금액</dt>
-                            <dd><span>0</span>원</dd>
-                        </dl>
-                    </div>
-                </div>
-                <div class="total_order_btn_wrap">
-                    <a href="#">계속 쇼핑하기</a>
-                    <a href="#">선택상품 주문하기</a>
-                    <a href="#" class="main_btn">전체상품 주문하기</a>
                 </div>
             </div>
+            <div class="total_order_btn_wrap">
+                    <a href="#" style="width: 420px; background-color: #6ca435; border: 1px solid #6ca435; color: #fff;">결제하기</a>
+                </div>
         </div>
     </div> <!-- 컨텐츠|끝 -->
     <!-- 푸터 -->
