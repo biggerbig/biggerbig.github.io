@@ -165,8 +165,9 @@
                                     <td scope="row" class="align_left">
                                         <a href="#"><img src="/img/demo/liststyle1_sample.jpg" alt="상품명" class="p_thumb">정갈한
                                             창난젓</a>
-                                        <div class="deliveryNoti">
-
+                                        <div class="delivery_notice">
+                                            <span class="possible">새벽배송가능</span>
+                                            <span class="impossible">택배불가</span>
                                         </div>
                                     </td>
                                     <td>8,500</td>
@@ -182,7 +183,7 @@
                                         <a href="#" class="update_quantity">변경</a>
                                     </td>
                                     <td class="buy_price">6,800</td>
-                                    <td rowspan="1">
+                                    <td rowspan="2" class="merge_row">
                                         <p class="ship_price">3,000</p>
                                     </td>
                                     <td class="order_btn_wrap">
@@ -194,6 +195,38 @@
                                     <td>
                                         <input type="checkbox" id="order_01" checked="checked">
                                         <label for="order_01"></label></span>
+                                    </td>
+                                    <td scope="row" class="align_left">
+                                        <a href="#"><img src="/img/demo/liststyle1_sample.jpg" alt="상품명" class="p_thumb">정갈한
+                                            창난젓</a>
+                                        <div class="delivery_notice">
+                                            <span class="impossible">새벽배송불가</span>
+                                            <span class="possible">택배가능</span>
+                                        </div>
+                                    </td>
+                                    <td>8,500</td>
+                                    <td>1,700<p><em>[20%]</em></p>
+                                    </td>
+                                    <td>
+                                        <div class="table_quantity_wrap">
+                                            <input type="text" value="1" class="quantity">
+                                            <a href="#" class="quantity_up"><img src="/img/assets/quantity_up.png" alt="수량 추가"></a>
+                                            <a href="#" class="quantity_down"><img src="/img/assets/quantity_down.png"
+                                                    alt="수량 감소"></a>
+                                        </div>
+                                        <a href="#" class="update_quantity">변경</a>
+                                    </td>
+                                    <td class="buy_price">6,800</td>
+
+                                    <td class="order_btn_wrap">
+                                        <a href="#">찜하기</a>
+                                        <a href="#">삭제</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="order_00" checked="checked">
+                                        <label for="order_00"></label></span>
                                     </td>
                                     <td scope="row" class="align_left">
                                         <a href="#"><img src="/img/demo/liststyle1_sample.jpg" alt="상품명" class="p_thumb">정갈한
@@ -243,6 +276,7 @@
                     <a href="#">전체선택</a>
                     <a href="#">선택상품 찜하기</a>
                     <a href="#">선택삭제</a>
+                    <i class="basket_notice">배송방법에 따른 배송 불가 상품이 포함되어 있는 경우 해당 상품은 주문 취소 될 수 있습니다.</i>
                 </div>
             </div>
             <div class="order_step_block">
