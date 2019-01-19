@@ -1,0 +1,20 @@
+<?php
+    include $_SERVER["DOCUMENT_ROOT"].'/assets/header.php';
+?>
+
+<!-- 컨텐츠 영역 -->
+
+<!-- 컨텐츠 영역 끝 -->
+
+<?php
+    include $_SERVER["DOCUMENT_ROOT"].'/assets/middle.php';
+?>
+
+<!-- JS 영역 -->
+
+
+<!-- JS 영역 끝-->
+
+<?php
+    include $_SERVER["DOCUMENT_ROOT"].'/assets/footer.php';
+?>

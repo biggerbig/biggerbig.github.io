@@ -1,0 +1,32 @@
+{
+  "ftp://14.63.221.64:60021@lotto": {
+    ".bash_history": {
+      "type": "-",
+      "size": 34,
+      "lmtime": 0,
+      "modified": false
+    },
+    ".cache": {},
+    "assets": {},
+    "css": {},
+    "font": {},
+    "img": {},
+    "index.php": {
+      "type": "-",
+      "size": 9014,
+      "lmtime": 0,
+      "modified": true
+    },
+    "js": {},
+    "manage": {},
+    "picker": {},
+    "prize": {},
+    "template": {
+      "type": "-",
+      "size": 329,
+      "lmtime": 0,
+      "modified": false
+    }
+  },
+  "$version": 1
+}

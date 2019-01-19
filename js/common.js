@@ -1,183 +1,65 @@
-// LNB 카테고리 메뉴 토글
-// var cateEle = document.querySelector('.all_cate')
-
-// cateEle.addEventListener('mouseover', function(){
-//     cateEle.querySelector('.all_cate_wrap').style.display = 'block'
-// });
-
-// cateEle.addEventListener('mouseout', function(){
-//     cateEle.querySelector('.all_cate_wrap').style.display = 'none'
-// });
-
-// 메인 슬라이드
-var topCarousel = $(".top_carousel");
-topCarousel.owlCarousel({
-    items: 1,
-    center: true,
-    autoplay: true,
-    autoplayHoverPause: true,
-    autoplaySpeed: 2000,
-    loop: true,
-    dotsContainer: '.dots'
-});
-$(".prev").click(function () {
-    topCarousel.trigger('prev.owl.carousel');
-});
-$(".next").click(function () {
-    topCarousel.trigger('next.owl.carousel');
+$(function () {
+    var lastScrollTop = 0,
+        delta = 15;
+    $(window).scroll(function (event) {
+        var st = $(this).scrollTop();
+        if (Math.abs(lastScrollTop - st) <= delta)
+            return;
+        if ((st > lastScrollTop) && (lastScrollTop > 0)) {
+            $("#header").css("top", "-50px");
+            $(".picker_top").css("top", "0px");
+            $(".menu_btn_m").css("top", "-50px");
+            $('.page_tool').css("top", "-50px");
+        } else {
+            $("#header").css("top", "0px");
+            $(".picker_top").css("top", "50px");
+            $(".menu_btn_m").css("top", "0px");
+            $(".page_tool").css("top", "0px");
+        }
+        lastScrollTop = st;
+    });
 });
 
-
-
-//bx1 슬라이드
-var bx1Carousel = $(".main_bx_slide1");
-bx1Carousel.owlCarousel({
-    items: 1,
-    center: true,
-    autoplay: true,
-    autoplayHoverPause: true,
-    autoplaySpeed: 1000,
-    loop: true,
-    dotsContainer: '.bx1dots'
-});
-$(".bx1_prev").click(function () {
-    bx1Carousel.trigger('prev.owl.carousel');
-});
-$(".bx1_next").click(function () {
-    bx1Carousel.trigger('next.owl.carousel');
+$(function () {
+    $(window).scroll(function () {
+        var winTop = $(window).scrollTop();
+        if (winTop >= 30) {
+            $("#header").css("background-color", "#1a1a1a");
+        } else {
+            $("#header").css("background-color", "#242425");
+        }
+    });
 });
 
-//bx2 슬라이드
-var bx2Carousel = $(".main_bx_slide2");
-bx2Carousel.owlCarousel({
-    items: 1,
-    center: true,
-    autoplay: true,
-    autoplayHoverPause: true,
-    autoplaySpeed: 1000,
-    loop: true,
-    dotsContainer: '.bx2dots'
-});
-$(".bx2_prev").click(function () {
-    bx2Carousel.trigger('prev.owl.carousel');
-});
-$(".bx2_next").click(function () {
-    bx2Carousel.trigger('next.owl.carousel');
-});
-
-//direct 슬라이드
-var d3dCarousel = $(".direct_slide");
-d3dCarousel.owlCarousel({
-    loop: true,
-    autoWidth: true,
-    items: 1,
-    center: true,
-    autoplay: false,
-    dotsContainer: '.d3dcopy',
-    margin: -70
-});
-$(".d3dprev").click(function () {
-    d3dCarousel.trigger('prev.owl.carousel');
-});
-$(".d3dnext").click(function () {
-    d3dCarousel.trigger('next.owl.carousel');
-});
-
-
-//best 슬라이드
-var bestcarousel = $(".best_carousel_slide");
-bestcarousel.owlCarousel({
-    items: 3,
-    center: false,
-    autoplay: true,
-    autoplayHoverPause: true,
-    autoplaySpeed: 1000,
-    loop: true,
-    dots: false,
-    margin: 75,
-    slideBy: 3
-});
-$(".bstprev").click(function () {
-    bestcarousel.trigger('prev.owl.carousel');
-});
-$(".bstnext").click(function () {
-    bestcarousel.trigger('next.owl.carousel');
-});
-
-//best 슬라이드
-var rltdcarousel = $(".related_slide");
-rltdcarousel.owlCarousel({
-    items: 6,
-    center: false,
-    autoplay: true,
-    autoplayHoverPause: true,
-    autoplaySpeed: 1000,
-    loop: true,
-    dots: false,
-    margin: 75,
-});
-$(".rltd_prev").click(function () {
-    rltdcarousel.trigger('prev.owl.carousel');
-});
-$(".rltd_next").click(function () {
-    rltdcarousel.trigger('next.owl.carousel');
-});
-
-
-// 메인 화면 오아시스 인기상품 탭
-$('.main_cate_tab>ul>li').click(function () {
-    var tabname = $(this).attr('data-tab');
-    $('.main_cate_tab>ul>li').removeClass('selected');
-    $('.tab_list').removeClass('selected');
-    $(this).addClass('selected')
-    $('.cate_tab' + tabname + '_list').addClass('selected');
-})
-
-// 고객센터 이용안내 탭
-$('.itrt_tab>li').click(function () {
-    var tabname2 = $(this).attr('id');
-    $('.itrt_tab>li').removeClass('selected');
-    $('.help_tab_con_block').removeClass('selected');
-    $(this).addClass('selected')
-    $('#' + tabname2 + '_con').addClass('selected');
-})
-
-// 상세페이지 이용안내 탭
-$('.detail_tab>ul>li').click(function () {
-    event.preventDefault();
-    var detailtab = $(this).attr('tab-data');
-    $('.detail_tab>ul>li').removeClass('selected');
-    $('.detail_sep').removeClass('open');
-    $(this).addClass('selected')
-    $('#' + detailtab).addClass('open');
-    var scrollto = $(this).children('a');
-    $('html, body').animate({
-        scrollTop: $(scrollto, 'href').offset().top
-    }, 500);
-})
-
-// 우측 플로팅 툴 스크롤 이벤트
-$(window).scroll(function () {
-    if ($(window).scrollTop() > 614) {
-        $('.float_banner').css('position', 'fixed').css('top', '10px');
+$(".menu_btn_m").click(function () {
+    if ($(".menu_btn_m").hasClass('open')){
+        $(".menu_btn_m,.menu,body").removeClass("open");
+        $(".page_cover").fadeOut(200);
+        history.back();
+    }else if ($(".menu_btn_m").hasClass('active')){
+        history.back();
     }else {
-        $('.float_banner').css('position', 'absolute').css('top', '624px');
+        $(".menu_btn_m,.menu,body").addClass("open");
+        $(".page_cover").fadeIn(200);
+        window.location.hash = "#menu-open";
     }
 });
 
-
-
-// 레이어 팝업
-$(".link_location").click(function () {
-    event.preventDefault();
-    $('.page_cover,.deliver_pop').fadeIn(200);
+$('.paper_layer_trigger').click(function(){
+    $('.paper_layer_wrap').fadeIn(200);
+    $(".layer_cover").fadeIn(200);
+    window.location.hash = "#menu-open";
 });
 
-$(".link_inquire").click(function () {
-    event.preventDefault();
-    $('.page_cover,.inquire_pop').fadeIn(200);
+$('.qr_layer_trigger').click(function(){
+    $('.qr_layer').fadeIn(200);
+    $(".layer_cover").fadeIn(200);
+    window.location.hash = "#menu-open";
 });
 
-$('.close_pop').click(function() {
-    $('.page_cover,.deliver_pop,.inquire_pop').fadeOut(200);
-})
+window.onhashchange = function () {
+    if (location.hash != "#menu-open") {
+        $(".menu_btn_m,.menu,body,.filter_layer").removeClass("open");
+        $(".page_cover,.prize_detail,.layer_cover,.paper_layer_wrap,.qr_layer").fadeOut(200);
+    }
+};
