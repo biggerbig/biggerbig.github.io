@@ -125,21 +125,63 @@
     </div>
     <div id="content">
         <div class="container">
-            <div class="page_tool">
-                <div class="board_cate_list">카테고리 리스트</div>
-            </div>
-
             <!-- 컨텐츠 영역 -->
             <div class="dash_con_wrap">
                 <div class="mydash">
-                    <h4>익명 게시판 전체</h4>
+                    <h4>익명 게시판 전체<div class="cate_btn"></div></h4>
                     <div class="dash_con_inner">
                         <div class="board_list_wrap">
                             <ul>
                                 <li>
                                     <a href="/board/detail.html">
-                                        <i>당첨인증</i>
-                                        <em>1등 당첨 됐어요!<span>2</span></em>
+                                        <div>
+                                            <em>1등 당첨 됐어요!</em>
+                                        </div>
+                                        <span>당첨인증</span>
+                                        <span>|</span>
+                                        <span>2019.01.28</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/board/detail.html">
+                                        <div>
+                                            <em>1등 당첨 됐어요!</em>
+                                            <i>2</i>
+                                        </div>
+                                        <span>당첨인증</span>
+                                        <span>|</span>
+                                        <span>2019.01.28</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/board/detail.html">
+                                        <div>
+                                            <em>1등 당첨 됐어요!</em>
+                                        </div>
+                                        <span>당첨인증</span>
+                                        <span>|</span>
+                                        <span>2019.01.28</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/board/detail.html">
+                                        <div>
+                                            <em>1등 당첨 됐어요!</em>
+                                            <i>2</i>
+                                        </div>
+                                        <span>당첨인증</span>
+                                        <span>|</span>
+                                        <span>2019.01.28</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/board/detail.html">
+                                        <div>
+                                            <em>1등 당첨 됐어요!</em>
+                                            <i>2</i>
+                                        </div>
+                                        <span>당첨인증</span>
+                                        <span>|</span>
                                         <span>2019.01.28</span>
                                     </a>
                                 </li>
@@ -266,33 +308,7 @@
 
     <!-- JS 영역 -->
     <script>
-        $('.mynum_item').each(function () {
-            var numResult = parseInt($(this).find('span').html());
-            if (numResult >= 1 && numResult <= 9) {
-                $(this).addClass('yellow');
-
-            } else if (numResult >= 10 && numResult <= 19) {
-                $(this).addClass('blue');
-            } else if (numResult >= 20 && numResult <= 29) {
-                $(this).addClass('red');
-            } else if (numResult >= 30 && numResult <= 39) {
-                $(this).addClass('purple');
-            } else if (numResult >= 40 && numResult <= 45) {
-                $(this).addClass('green');
-            } else {
-                $(this).addClass('nonum');
-                $(this).children().children('span').css('background', 'transparent')
-                $(this).children().children('span').css('color', '#fff')
-                $(this).children().children('span').css('font-size', '16px')
-            }
-        });
-
-        $('.open_prize_layer').click(function () {
-            $('.prize_detail').fadeIn(200);
-            $(".layer_cover").fadeIn(200);
-            $('body').addClass('open');
-            window.location.hash = "#menu-open";
-        });
+       
     </script>
     <!-- JS 영역 끝-->
 

@@ -638,6 +638,7 @@ select::-ms-expand {
     font-weight: normal;
     padding-left: 5px;
     font-family: 'chosun_ilbo_myungjo';
+    position: relative;
 }
 
 .dash_con_wrap h4 span {
@@ -646,8 +647,6 @@ select::-ms-expand {
     margin-left: 8px;
     font-family: 'chosun_ilbo_myungjo';
 }
-
-.dash_con_inner {}
 
 .dash_con_inner div>ul>li {
     font-size: 0;
@@ -1024,8 +1023,6 @@ input[class=mynum_checkbox]:checked+label {
     font-size: 16px;
     font-family: 'chosun_ilbo_myungjo';
 }
-
-.paper_layer_wrap select option {}
 
 input[class=reg_num] {
     display: none;
@@ -1807,17 +1804,61 @@ input[class=qr_item_check]:checked+label::after {
     background-color: #fff;
 }
 
-.board_list_wrap li i {
-    display: inline-block;
-    float: left;
-    font-style: normal;
-    color: #fff;
+.board_list_wrap li a {
+    padding: 0 14px;
+    display: block;
+    position: relative;
+}
+
+.board_list_wrap li div {
+    
 }
 
 .board_list_wrap li em {
+    height: 25px;
+    line-height: 36px;
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 90%;
+    position: relative;
+}
 
+.board_list_wrap li i {
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+    font-style: normal;
+    vertical-align: top;
+    padding: 0 5px;
+    line-height: 16px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #e1605b;
+    border-radius: 5px;
+    margin-left: 5px;
 }
 
 .board_list_wrap li span {
+    height: 25px;
+    display: inline-block;
+    line-height: 20px;
+    color: #797979;
+}
 
+.cate_btn {
+    width: 19px;
+    height: 19px;
+    background-image: url(/img/assets/cate.png);
+    background-size: 19px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
