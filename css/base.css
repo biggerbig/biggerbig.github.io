@@ -1806,3 +1806,18 @@ input[class=qr_item_check]:checked+label::after {
     width: 1px;
     background-color: #fff;
 }
+
+.board_list_wrap li i {
+    display: inline-block;
+    float: left;
+    font-style: normal;
+    color: #fff;
+}
+
+.board_list_wrap li em {
+
+}
+
+.board_list_wrap li span {
+
+}
