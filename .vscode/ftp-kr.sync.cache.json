@@ -8,9 +8,16 @@
     },
     ".cache": {},
     "assets": {},
+    "board": {},
     "css": {},
     "font": {},
     "img": {},
+    "index.html": {
+      "type": "-",
+      "size": 16754,
+      "lmtime": 0,
+      "modified": false
+    },
     "index.php": {
       "type": "-",
       "size": 9014,

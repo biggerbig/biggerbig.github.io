@@ -59,7 +59,7 @@ $('.qr_layer_trigger').click(function(){
 
 window.onhashchange = function () {
     if (location.hash != "#menu-open") {
-        $(".menu_btn_m,.menu,body,.filter_layer").removeClass("open");
+        $(".menu_btn_m,.menu,body,.filter_layer,.board_cate_menu").removeClass("open");
         $(".page_cover,.prize_detail,.layer_cover,.paper_layer_wrap,.qr_layer").fadeOut(200);
     }
 };

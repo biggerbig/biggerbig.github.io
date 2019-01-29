@@ -1,6 +1,7 @@
 @import url(//fonts.googleapis.com/css?family=Roboto:400,100,700);
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
 
-@font-face {
+/* @font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: normal;
@@ -12,7 +13,7 @@
     font-style: normal;
     font-weight: bold;
     src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');
-}
+} */
 
 @font-face {
     font-family: 'chosun_ilbo_myungjo';
@@ -30,7 +31,7 @@
     font-size: 13px;
     -webkit-text-size-adjust: none;
     /*    font-family: 'NanumSquare', sans-serif;*/
-    font-family: 'Roboto', 'Noto Sans KR', 'sans-serif';
+    font-family: 'Roboto', 'Jeju Gothic', 'sans-serif';
     outline: none;
     -webkit-appearance: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -648,6 +649,8 @@ select::-ms-expand {
     font-family: 'chosun_ilbo_myungjo';
 }
 
+.dash_con_inner {}
+
 .dash_con_inner div>ul>li {
     font-size: 0;
     height: 50px;
@@ -1023,6 +1026,8 @@ input[class=mynum_checkbox]:checked+label {
     font-size: 16px;
     font-family: 'chosun_ilbo_myungjo';
 }
+
+.paper_layer_wrap select option {}
 
 input[class=reg_num] {
     display: none;
@@ -1861,4 +1866,127 @@ input[class=qr_item_check]:checked+label::after {
     position: absolute;
     right: 0;
     top: 0;
+}
+
+.board_cate_menu {
+    width: 100%;
+    position: fixed;
+    bottom: -200px;
+    left: 0;
+    z-index: 12;
+    transition: All 0.2s ease-out;
+    -webkit-transition: All 0.2s ease-out;
+    -moz-transition: All 0.2s ease-out;
+    -o-transition: All 0.2s ease-out;
+}
+
+.board_cate_menu.open {
+    bottom: 50px;
+}
+
+.board_cate_menu ul {
+    padding: 20px;
+    background-color: #393939;
+}
+
+.board_cate_menu li a {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    color: #fff;
+    line-height: 40px;
+}
+
+.board_detail_wrap {
+    
+}
+
+.board_top {
+    background-color: #1a1a1a;
+}
+
+.board_title {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.board_title h3 {
+    color: #fff;
+    font-size: 26px;
+    word-break: keep-all;
+    width: 340px;
+    font-family: 'Jeju Gothic', sans-serif;
+    font-weight: 300;
+    line-height: 30px;
+    overflow-x: hidden;
+    margin-bottom: 5px;
+    padding-top: 200px;
+    padding-bottom: 10px;
+}
+
+.board_title span {
+    display: inline-block;
+    font-size: 12px;
+    color: #666;
+    vertical-align: top;
+}
+
+.board_mid {
+    min-height: 300px;
+}
+
+.article_content {
+    width: 90%;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+.article_content * {
+    font-size: 16px;
+    color: #999;
+    line-height: 28.8px;
+    font-weight: 300;
+}
+
+.cmnt_input {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.cmnt_input input {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 54px;
+    box-sizing: border-box;
+    background-color: #444;
+    border: none;
+    color: #999;
+    resize: vertical;
+    font-size: 14px;
+    line-height: 44px;
+    height: 44px;
+}
+
+.cmnt_input input + label {
+    display: none;
+}
+
+.cmnt_input a {
+    width: 44px;
+    height: 44px;
+    box-sizing: border-box;
+    background-color: #e1605b;
+    color: #fff;
+    border: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    line-height: 44px;
+    text-align: center;
+}
+
+.board_bottom {
+    
 }
