@@ -132,16 +132,90 @@
     </div>
     <div id="content">
         <div class="container">
-            <p id="url"></p>
+            <input type="text" id="url" />
+            <div id="qrdata"></div>
             <video id="preview"></video>
             <script type="text/javascript">
                 let scanner = new Instascan.Scanner({
                     video: document.getElementById('preview')
                 });
                 scanner.addListener('scan', function (content) {
-                    var html = '';
-                    html += content;
-                    document.getElementById('url').innerHTML = html;
+
+
+
+
+
+
+
+
+
+
+
+
+                    document.getElementById('url').valur = content;
+
+                    var qrTextData = $('#url').val();
+                    var replaceText = qrTextData.replace("http://m.dhlottory.co.kr/?v=", "").replace("http://qr.645lotto.net/?v=", "").replace(/a|b|c|d|e|f|g|h|i|j|k|l|n|o|p|q|r|s|t|u|v|w|x|y|z/gi, "m"); 
+                    var qs = replaceText
+                    var round = 0;
+                    var lotto_number = [];
+                    var lot_numbers = qs.split('m')
+                    console.log(qrTextData);
+                    console.log(replaceText);
+                    lot_numbers.map((num, idx) => {
+                        if (idx === 0) {
+                            round = num.substring(1) + "회차에 구매하신 번호"
+                        } else {
+                            var lot_num = [];
+                            for (var i = 0; i < 12; i = i + 2) {
+                                lot_num.push(num.substring(i, 2 + i))
+                                console.log(i, num.substring(i, 2 + i));
+                            }
+                            lotto_number.push(lot_num)
+                        }
+                    })
+
+                    console.log(lotto_number)
+
+                    $('.qrdata_inner').remove();
+                    $('#qrdata').append('<div class="qrdata_inner"></div>')
+                    $('.qrdata_inner').append('<h6>' + round + '</h6>')
+                    $.each(lotto_number, function (index, value) {
+                        var combClass = 'comb' + index
+                        $('.qrdata_inner').append('<ul class="' + combClass + '"></ul>');
+                        $.each(value, function (index, value) {
+                            $('.' + combClass).append('<li class="mynum_item"><div><span>' + value + '</span></div></li>');
+                        });
+                        $('.' + combClass).append('<input type="checkbox" id="' + combClass + '" name="' + combClass + '"class="qr_item_check" checked />');
+                        $('.' + combClass).append('<label for="' + combClass + '"></label>');
+                    });
+                    $('.mynum_item').each(function () {
+                        var numResult = parseInt($(this).find('span').html());
+                        if (numResult >= 1 && numResult <= 9) {
+                            $(this).addClass('yellow');
+                        } else if (numResult >= 10 && numResult <= 19) {
+                            $(this).addClass('blue');
+                        } else if (numResult >= 20 && numResult <= 29) {
+                            $(this).addClass('red');
+                        } else if (numResult >= 30 && numResult <= 39) {
+                            $(this).addClass('purple');
+                        } else if (numResult >= 40 && numResult <= 45) {
+                            $(this).addClass('green');
+                        } else {
+                            $(this).addClass('nonum');
+                            $(this).children().children('span').css('background', 'transparent')
+                            $(this).children().children('span').css('color', '#fff')
+                            $(this).children().children('span').css('font-size', '16px')
+                        }
+                    });
+
+
+
+
+
+
+
+
                 });
                 Instascan.Camera.getCameras().then(cameras => {
                     if (cameras.length > 0) {
@@ -150,6 +224,8 @@
                         console.error("Please enable Camera!");
                     }
                 });
+
+                
             </script>
 
 
