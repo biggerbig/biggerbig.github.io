@@ -188,7 +188,7 @@
                         $('.' + combClass).append('<input type="checkbox" id="' + combClass + '" name="' + combClass + '"class="qr_item_check" checked />');
                         $('.' + combClass).append('<label for="' + combClass + '"></label>');
                     });
-                    $(.qr_layer).show();
+                    $('.qr_layer').show();
                     $('.mynum_item').each(function () {
                         var numResult = parseInt($(this).find('span').html());
                         if (numResult >= 1 && numResult <= 9) {
