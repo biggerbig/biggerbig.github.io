@@ -2301,14 +2301,16 @@ input[class=qr_item_check]:checked+label::after {
     width: 100%;
     text-align: center;
     position: absolute;
-    top: 80px;
+    top: 50px;
     left: 0;
     z-index: 2;
+    line-height: 50px;
+    background-color: rgba(0,0,0,0.4);
 }
 
 .focus {
     font-family: 'xeicon';
-    font-size: 60px;
+    font-size: 180px;
     width: 100%;
     position: absolute;
     top: 50%;
