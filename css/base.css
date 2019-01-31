@@ -1813,6 +1813,10 @@ input[class=qr_item_check]:checked+label::after {
     background-color: #fff;
 }
 
+.board_list_wrap li {
+    back
+}
+
 .board_list_wrap li a {
     padding: 0 14px;
     display: block;
@@ -1919,7 +1923,7 @@ input[class=qr_item_check]:checked+label::after {
 }
 
 .board_top {
-    background-color: #1a1a1a;
+    background-size: cover;
 }
 
 .board_title {
@@ -2007,6 +2011,11 @@ input[class=qr_item_check]:checked+label::after {
     box-sizing: border-box;
     margin-top: 14px;
     font-size: 13px;
+}
+
+.article_content .img_attach img {
+    width: 100%;
+    margin-top: 40px;
 }
 
 .cmnt_input {
