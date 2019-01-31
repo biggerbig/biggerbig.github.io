@@ -2131,3 +2131,57 @@ input[class=qr_item_check]:checked+label::after {
     width: 100%;
     box-sizing: border-box;
 }
+
+.login_wrap {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+    background-color: #2c2d2d;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.login_wrap img {
+    width: 100px;
+    margin-bottom: 100px;
+}
+
+.login_wrap p {
+    font-size: 14px;
+    color: #fff;
+    font-family: 'chosun_ilbo_myungjo';
+    line-height: 18px;
+}
+
+.login_wrap ul {
+    display: block;
+    margin-top: 20px;
+}
+
+.login_wrap ul li {
+    display: block;
+}
+
+.login_wrap ul li a {
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    width: 220px;
+}
+
+.login_wrap ul li a.naver {
+    background-color: #03cf5d;
+    color: #fff;
+}
+
+.login_wrap ul li a.kakao {
+    background-color: #FCCE00;
+    color: #000;
+    margin-top: 5px;
+}
