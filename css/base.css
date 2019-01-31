@@ -2316,7 +2316,7 @@ input[class=qr_item_check]:checked+label::after {
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
-    color: #fff;
+    color: #000;
     opacity: 0.4;
     z-index: 2;
 }
