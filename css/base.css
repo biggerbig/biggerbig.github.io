@@ -1872,6 +1872,19 @@ input[class=qr_item_check]:checked+label::after {
     top: 0;
 }
 
+.myarticle_btn {
+    width: 19px;
+    height: 19px;
+    background-image: url(/img/assets/user.png);
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 33px;
+    top: 0;
+    display: block;
+}
+
 .board_cate_menu {
     width: 100%;
     position: fixed;
@@ -1929,6 +1942,7 @@ input[class=qr_item_check]:checked+label::after {
     border: 1px dotted #444;
     background-color: #1a1a1a;
     box-sizing: border-box;
+    width: 100%;
 }
 
 .board_title .article_cate {
@@ -1972,7 +1986,6 @@ input[class=qr_item_check]:checked+label::after {
     font-size: 16px;
     color: #999;
     line-height: 28.8px;
-    font-weight: 300;
 }
 
 .article_content .article_body {
@@ -2065,7 +2078,7 @@ input[class=qr_item_check]:checked+label::after {
 }
 
 .board_bottom {
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 
 .write_btn {
@@ -2090,4 +2103,22 @@ input[class=qr_item_check]:checked+label::after {
     color: #fff;
     text-align: center;
     line-height: 15px;
+}
+
+.board_tool {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 50px;
+}
+
+.board_tool a {
+    line-height: 50px;
+    text-align: center;
+    font-size: 13px;
+    background-color: #e1605b;
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
 }
