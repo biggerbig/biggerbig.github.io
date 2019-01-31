@@ -149,7 +149,7 @@
             <script type="text/javascript">
                 let scanner = new Instascan.Scanner({
                     video: document.getElementById('preview'),
-                    mirror: true,
+                    mirror: false,
                     backgroundScan: false
                 });
                 scanner.addListener('scan', function (content) {
@@ -167,7 +167,7 @@
                     console.log(replaceText);
                     lot_numbers.map((num, idx) => {
                         if (idx === 0) {
-                            round = num.substring(1) + "회차에 구매하신 번호4"
+                            round = num.substring(1) + "회차에 구매하신 번호5"
                         } else {
                             var lot_num = [];
                             for (var i = 0; i < 12; i = i + 2) {
