@@ -58,12 +58,17 @@
                 $(".loader_wrap").remove();
             }, 2000);
             var splashCopy = '';
-            var letters = ['1등은 예기치 않게<br>찾아옵니다.', '정말 예상 가능하다고<br>생각하시나요?', '1,2,3,4,5,6과 당신이 고른번호<br>당첨확률은 같습니다.', '로또는<br>운 입니다.', '약 815만분의 1.<br>확률은 모두 동일합니다.', '로또하기<br>딱 좋은 기분', '오늘은 왠지<br>느낌이 좋다.', '자주사는 번호는<br>꼭 등록해 주세요.', '당첨은<br>생일과 상관 없습니다.', '자동이 아니라면<br>언제 사든 똑같습니다.', '자동이 아니라면<br>어디서 사든 똑같습니다.', '주변 사람들에게<br>추천하기♥', '매주한번 돌아오는<br>기부의 시간', '로또롱또똣<br>별 뜻은 없습니다.', '과학적 근거<br>그런건 없습니다.'];
+            var letters = ['1등은 예기치 않게<br>찾아옵니다.', '정말 예상 가능하다고<br>생각하시나요?',
+                '1,2,3,4,5,6과 당신이 고른번호<br>당첨확률은 같습니다.', '로또는<br>운 입니다.', '약 815만분의 1.<br>확률은 모두 동일합니다.',
+                '로또하기<br>딱 좋은 기분', '오늘은 왠지<br>느낌이 좋다.', '자주사는 번호는<br>꼭 등록해 주세요.', '당첨은<br>생일과 상관 없습니다.',
+                '자동이 아니라면<br>언제 사든 똑같습니다.', '자동이 아니라면<br>어디서 사든 똑같습니다.', '주변 사람들에게<br>추천하기♥',
+                '매주한번 돌아오는<br>기부의 시간', '로또롱또똣<br>별 뜻은 없습니다.', '과학적 근거<br>그런건 없습니다.'
+            ];
             splashCopy += letters[Math.floor(Math.random() * letters.length)];
             document.getElementById('splash_copy').innerHTML = splashCopy;
         });
     </script>
-    
+
     <script src="/js/instascan.min.js"></script>
 </head>
 
@@ -127,23 +132,69 @@
     </div>
     <div id="content">
         <div class="container">
-
-                <video id="preview"></video>
-                <script type="text/javascript">
-                  let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
-                  scanner.addListener('scan', function (content) {
-                    console.log(content);
-                  });
-                  Instascan.Camera.getCameras().then(function (cameras) {
-                    if (cameras.length > 0) {
-                      scanner.start(cameras[0]);
-                    } else {
-                      console.error('No cameras found.');
+            <div id="app">
+                <div class="sidebar">
+                    <section class="cameras">
+                        <h2>Cameras</h2>
+                        <ul>
+                            <li class="empty">No cameras found</li>
+                        </ul>
+                    </section>
+                    <section class="scans">
+                        <h2>Scans</h2>
+                        <ul>
+                            <li class="empty">No scans yet</li>
+                        </ul>
+                        <ul></ul>
+                    </section>
+                </div>
+                <div class="preview-container"><video id="preview" autoplay="autoplay" class="inactive" style="transform: scaleX(-1);"></video></div>
+            </div>
+            <video id="preview"></video>
+            <script type="text/javascript">
+                var app = new Vue({
+                    el: '#app',
+                    data: {
+                        scanner: null,
+                        activeCameraId: null,
+                        cameras: [],
+                        scans: []
+                    },
+                    mounted: function () {
+                        var self = this;
+                        self.scanner = new Instascan.Scanner({
+                            video: document.getElementById('preview'),
+                            scanPeriod: 5
+                        });
+                        self.scanner.addListener('scan', function (content, image) {
+                            self.scans.unshift({
+                                date: +(Date.now()),
+                                content: content
+                            });
+                        });
+                        Instascan.Camera.getCameras().then(function (cameras) {
+                            self.cameras = cameras;
+                            if (cameras.length > 0) {
+                                self.activeCameraId = cameras[0].id;
+                                self.scanner.start(cameras[0]);
+                            } else {
+                                console.error('No cameras found.');
+                            }
+                        }).catch(function (e) {
+                            console.error(e);
+                        });
+                    },
+                    methods: {
+                        formatName: function (name) {
+                            return name || '(unknown)';
+                        },
+                        selectCamera: function (camera) {
+                            this.activeCameraId = camera.id;
+                            this.scanner.start(camera);
+                        }
                     }
-                  }).catch(function (e) {
-                    console.error(e);
-                  });
-                </script>
+                });
+            </script>
 
 
         </div>
