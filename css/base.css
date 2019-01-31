@@ -41,6 +41,10 @@ input[type=checkbox] {
     -webkit-appearance: checkbox;
 }
 
+input[type=text] + label {
+    display: none;
+}
+
 html {
     height: 100%;
     width: 100%;
@@ -1909,6 +1913,29 @@ input[class=qr_item_check]:checked+label::after {
     width: 90%;
     margin: 0 auto;
     padding: 20px 0;
+    padding-top: 50px;
+}
+
+.board_title .article_title {
+    color: #fff;
+    font-size: 26px;
+    word-break: keep-all;
+    width: 340px;
+    font-weight: normal;
+    line-height: 30px;
+    overflow-x: hidden;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px dotted #444;
+    background-color: #1a1a1a;
+    box-sizing: border-box;
+}
+
+.board_title .article_cate {
+    border: 1px dotted #444;
+    background-color: #1a1a1a;
+    color: #666;
+    padding: 10px;
 }
 
 .board_title h3 {
@@ -1916,13 +1943,12 @@ input[class=qr_item_check]:checked+label::after {
     font-size: 26px;
     word-break: keep-all;
     width: 340px;
-    font-family: 'Jeju Gothic', sans-serif;
-    font-weight: 300;
+    font-weight: normal;
     line-height: 30px;
     overflow-x: hidden;
     margin-bottom: 5px;
-    padding-top: 200px;
     padding-bottom: 10px;
+    max-width: 250px;
 }
 
 .board_title span {
@@ -1949,9 +1975,28 @@ input[class=qr_item_check]:checked+label::after {
     font-weight: 300;
 }
 
+.article_content .article_body {
+    background-color: #2c2d2d;
+    border: 1px dotted #444;
+    padding: 10px;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    min-height: 300px;
+}
+
+.article_content .article_attach {
+    background-color: #2c2d2d;
+    border: 1px dotted #444;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 14px;
+    font-size: 13px;
+}
+
 .cmnt_input {
-    width: 90%;
-    margin: 0 auto;
     position: relative;
 }
 
@@ -1987,6 +2032,62 @@ input[class=qr_item_check]:checked+label::after {
     text-align: center;
 }
 
+.cmnt_list {
+    padding-top: 14px;
+}
+
+.cmnt_item {
+    padding: 14px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.cmnt_item + .cmnt_item {
+    border-top: 1px solid #444;
+}
+
+.cmnt_item em {
+    font-style: normal;
+    color: #fff;
+}
+
+.cmnt_item span {
+    color: #797979;
+    font-size: 12px;
+    vertical-align: bottom;
+    margin-left: 5px;
+}
+
+.cmnt_item p {
+    margin-top: 5px;
+    color: #999;
+    line-height: 20px;
+}
+
 .board_bottom {
-    
+    padding-bottom: 30px;
+}
+
+.write_btn {
+    width: 50px;
+    height: 50px;
+    background-image: url(/img/assets/write_btn.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 0;
+    display: block;
+}
+
+.del:after {
+    content: "X";
+    font-size: 13px;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    text-align: center;
+    line-height: 15px;
 }

@@ -58,7 +58,12 @@
                 $(".loader_wrap").remove();
             }, 2000);
             var splashCopy = '';
-            var letters = ['1등은 예기치 않게<br>찾아옵니다.', '정말 예상 가능하다고<br>생각하시나요?', '1,2,3,4,5,6과 당신이 고른번호<br>당첨확률은 같습니다.', '로또는<br>운 입니다.', '약 815만분의 1.<br>확률은 모두 동일합니다.', '로또하기<br>딱 좋은 기분', '오늘은 왠지<br>느낌이 좋다.', '자주사는 번호는<br>꼭 등록해 주세요.', '당첨은<br>생일과 상관 없습니다.', '자동이 아니라면<br>언제 사든 똑같습니다.', '자동이 아니라면<br>어디서 사든 똑같습니다.', '주변 사람들에게<br>추천하기♥', '매주한번 돌아오는<br>기부의 시간', '로또롱또똣<br>별 뜻은 없습니다.', '과학적 근거<br>그런건 없습니다.'];
+            var letters = ['1등은 예기치 않게<br>찾아옵니다.', '정말 예상 가능하다고<br>생각하시나요?',
+                '1,2,3,4,5,6과 당신이 고른번호<br>당첨확률은 같습니다.', '로또는<br>운 입니다.', '약 815만분의 1.<br>확률은 모두 동일합니다.',
+                '로또하기<br>딱 좋은 기분', '오늘은 왠지<br>느낌이 좋다.', '자주사는 번호는<br>꼭 등록해 주세요.', '당첨은<br>생일과 상관 없습니다.',
+                '자동이 아니라면<br>언제 사든 똑같습니다.', '자동이 아니라면<br>어디서 사든 똑같습니다.', '주변 사람들에게<br>추천하기♥',
+                '매주한번 돌아오는<br>기부의 시간', '로또롱또똣<br>별 뜻은 없습니다.', '과학적 근거<br>그런건 없습니다.'
+            ];
             splashCopy += letters[Math.floor(Math.random() * letters.length)];
             document.getElementById('splash_copy').innerHTML = splashCopy;
         });
@@ -125,6 +130,9 @@
     </div>
     <div id="content">
         <div class="container">
+            <div class="page_tool">
+                <div class="write_btn">작성하기</div>
+            </div>
             <!-- 컨텐츠 영역 -->
             <div class="board_detail_wrap">
                 <div class="board_top">
@@ -142,23 +150,37 @@
                 </div>
                 <div class="board_bottom">
                     <div class="cmnt_wrap">
-                        <div class="cmnt_input">
-                            <input type="text" id="cmnt" placeholder="댓글을 입력하세요." />
-                            <label for="cmnt">댓글</label>
-                            <a href="#">작성</a>
+                        <div class="dash_con_wrap">
+                            <div class="mydash">
+                                <h4>댓글(2)</h4>
+                                <div class="cmnt_input">
+                                    <input type="text" id="cmnt" placeholder="댓글을 입력하세요." />
+                                    <label for="cmnt">댓글</label>
+                                    <a href="#">작성</a>
+                                </div>
+                                <ul class="cmnt_list">
+                                    <li class="cmnt_item">
+                                        <em>익명</em>
+                                        <span>2019.01.31</span>
+                                        <p>와 부러워요! 저는 언제쯤 당첨 될수 있을까요 당첨 소식 들어보니 희망이 생기네요! 화이팅</p>
+                                        <div class="del"></div>
+                                    </li>
+                                    <li class="cmnt_item">
+                                        <em>익명</em>
+                                        <span>2019.01.31</span>
+                                        <p>와 부러워요! 저는 언제쯤 당첨 될수 있을까요 당첨 소식 들어보니 희망이 생기네요! 화이팅</p>
+                                        <div class="del"></div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <ul>
-                            <li>
-                                <em>익명</em>
-                            </li>
-                        </ul>
                     </div>
                     <div class="dash_con_wrap">
                         <div class="mydash">
                             <h4>다음 게시물 보기</h4>
                             <div class="dash_con_inner">
                                 <div class="board_list_wrap">
-                                    
+
                                     <!-- 이전 게시물 2개 다음 게시물 2개 -->
                                     <ul>
                                         <li>
