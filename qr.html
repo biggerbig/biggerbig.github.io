@@ -134,7 +134,7 @@
         <div class="container">
             <input type="text" id="url" />
             <div id="qrdata"></div>
-            <video id="preview"></video>
+            <video id="preview" style="width:200px; height:200px"></video>
             <script type="text/javascript">
                 let scanner = new Instascan.Scanner({
                     video: document.getElementById('preview')
@@ -152,7 +152,7 @@
 
 
 
-                    document.getElementById('url').valur = content;
+                    document.getElementById('url').value = content;
 
                     var qrTextData = $('#url').val();
                     var replaceText = qrTextData.replace("http://m.dhlottory.co.kr/?v=", "").replace("http://qr.645lotto.net/?v=", "").replace(/a|b|c|d|e|f|g|h|i|j|k|l|n|o|p|q|r|s|t|u|v|w|x|y|z/gi, "m"); 
