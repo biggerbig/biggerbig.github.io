@@ -1171,7 +1171,6 @@ input[class=reg_num]:checked+label {
 }
 
 .qrdata_inner {
-    border-top: 1px solid #d5d5d5;
     padding-bottom: 14px
 }
 
@@ -2299,4 +2298,17 @@ input[class=qr_item_check]:checked+label::after {
     color: #fff;
     font-size: 13px;
     line-height: 18px;
+}
+
+video{
+    width: 100%;
+    height: calc(100vh - 103px);
+    overflow: hidden;
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
+}
+
+#url {
+    display: none;
 }

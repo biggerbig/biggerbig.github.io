@@ -1459,7 +1459,7 @@ var qrcode = function () {
                     null != g.callback && g.callback(g.result)
 
                     var qrTextData = $('#code_result').val();
-                    var replaceText = qrTextData.replace("http://m.dhlottory.co.kr/?v=", "").replace("http://qr.645lotto.net/?v=", "").replace(/a|b|c|d|e|f|g|h|i|j|k|l|n|o|p|q|r|s|t|u|v|w|x|y|z/gi, "m"); 
+                    var replaceText = qrTextData.replace("http://m.dhlottery.co.kr/?v=", "").replace("http://qr.645lotto.net/?v=", "").replace(/a|b|c|d|e|f|g|h|i|j|k|l|n|o|p|q|r|s|t|u|v|w|x|y|z/gi, "m"); 
                     var qs = replaceText
                     var round = 0;
                     var lotto_number = [];

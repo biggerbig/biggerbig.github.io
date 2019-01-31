@@ -133,25 +133,25 @@
     <div id="content">
         <div class="container">
             <input type="text" id="url" />
-            <div id="qrdata"></div>
-            <video id="preview" style="width:200px; height:200px"></video>
+            <div class="qr_layer">
+                <h5>QR등록</h5>
+                <div class="qr_layer_inner">
+                    <div id="qrdata">
+                        
+                    <div class="qrdata_inner"><h6>840회차에 구매하신 번호</h6><ul class="comb0"><li class="mynum_item yellow"><div><span>07</span></div></li><li class="mynum_item blue"><div><span>12</span></div></li><li class="mynum_item red"><div><span>28</span></div></li><li class="mynum_item purple"><div><span>31</span></div></li><li class="mynum_item purple"><div><span>39</span></div></li><li class="mynum_item green"><div><span>41</span></div></li><input type="checkbox" id="comb0" name="comb0" class="qr_item_check" checked=""><label for="comb0"></label></ul><ul class="comb1"><li class="mynum_item yellow"><div><span>08</span></div></li><li class="mynum_item blue"><div><span>11</span></div></li><li class="mynum_item red"><div><span>24</span></div></li><li class="mynum_item red"><div><span>27</span></div></li><li class="mynum_item purple"><div><span>38</span></div></li><li class="mynum_item green"><div><span>45</span></div></li><input type="checkbox" id="comb1" name="comb1" class="qr_item_check" checked=""><label for="comb1"></label></ul><ul class="comb2"><li class="mynum_item yellow"><div><span>08</span></div></li><li class="mynum_item blue"><div><span>11</span></div></li><li class="mynum_item blue"><div><span>15</span></div></li><li class="mynum_item purple"><div><span>33</span></div></li><li class="mynum_item green"><div><span>42</span></div></li><li class="mynum_item green"><div><span>45</span></div></li><input type="checkbox" id="comb2" name="comb2" class="qr_item_check" checked=""><label for="comb2"></label></ul><ul class="comb3"><li class="mynum_item yellow"><div><span>05</span></div></li><li class="mynum_item blue"><div><span>18</span></div></li><li class="mynum_item red"><div><span>27</span></div></li><li class="mynum_item red"><div><span>28</span></div></li><li class="mynum_item purple"><div><span>35</span></div></li><li class="mynum_item purple"><div><span>38</span></div></li><input type="checkbox" id="comb3" name="comb3" class="qr_item_check" checked=""><label for="comb3"></label></ul><ul class="comb4"><li class="mynum_item yellow"><div><span>06</span></div></li><li class="mynum_item yellow"><div><span>08</span></div></li><li class="mynum_item blue"><div><span>11</span></div></li><li class="mynum_item red"><div><span>28</span></div></li><li class="mynum_item purple"><div><span>30</span></div></li><li class="mynum_item purple"><div><span>32</span></div></li><input type="checkbox" id="comb4" name="comb4" class="qr_item_check" checked=""><label for="comb4"></label></ul></div></div>
+                </div>
+                <div class="paper_layer_btn_wrap">
+                    <a>저장</a>
+                    <a style="background-color: #666;" onclick="history.back();">취소</a>
+                    <!-- <a onclick="history.back();">확인</a> -->
+                </div>
+            </div>
+            <video id="preview"></video>
             <script type="text/javascript">
                 let scanner = new Instascan.Scanner({
                     video: document.getElementById('preview')
                 });
                 scanner.addListener('scan', function (content) {
-
-
-
-
-
-
-
-
-
-
-
-
                     document.getElementById('url').value = content;
 
                     var qrTextData = $('#url').val();
@@ -188,6 +188,7 @@
                         $('.' + combClass).append('<input type="checkbox" id="' + combClass + '" name="' + combClass + '"class="qr_item_check" checked />');
                         $('.' + combClass).append('<label for="' + combClass + '"></label>');
                     });
+                    $(.qr_layer).show();
                     $('.mynum_item').each(function () {
                         var numResult = parseInt($(this).find('span').html());
                         if (numResult >= 1 && numResult <= 9) {
@@ -207,14 +208,6 @@
                             $(this).children().children('span').css('font-size', '16px')
                         }
                     });
-
-
-
-
-
-
-
-
                 });
                 Instascan.Camera.getCameras().then(cameras => {
                     if (cameras.length > 0) {
@@ -223,8 +216,6 @@
                         console.error("Please enable Camera!");
                     }
                 });
-
-                
             </script>
 
 
