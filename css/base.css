@@ -2307,6 +2307,9 @@ video{
     transform: rotateY(180deg);
     -webkit-transform:rotateY(180deg); /* Safari and Chrome */
     -moz-transform:rotateY(180deg); /* Firefox */
+    position: fixed;
+    top: 50px;
+    left: 0;
 }
 
 #url {
