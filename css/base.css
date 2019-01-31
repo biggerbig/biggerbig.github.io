@@ -2304,9 +2304,8 @@ video{
     width: 100%;
     height: calc(100vh - 100px);
     overflow: hidden;
-    transform: rotateY(180deg) !important;
-    -webkit-transform:rotateY(180deg)!important; /* Safari and Chrome */
-    -moz-transform:rotateY(180deg)!important; /* Firefox */
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
     position: fixed;
     top: 50px;
     left: 0;
