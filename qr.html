@@ -49,7 +49,7 @@
             line-height: 26px;
         }
     </style>
-    <link href="/css/base.css?v=11" rel="stylesheet" type="text/css" />
+    <link href="/css/base.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript">
         $(window).load(function () {
@@ -160,9 +160,8 @@
                     document.getElementById('url').value = content;
 
                     var qrTextData = $('#url').val();
-                    var replaceText = qrTextData.replace("http://m.dhlottery.co.kr/?v=", "").replace(
-                        "http://qr.645lotto.net/?v=", "").replace(
-                        /a|b|c|d|e|f|g|h|i|j|k|l|n|o|p|q|r|s|t|u|v|w|x|y|z/gi, "m");
+                    var replaceText = qrTextData.replace("http://qr.nlotto.co.kr/?v=", "").replace("http://m.dhlottery.co.kr/?v=", "").replace(
+                        "http://qr.645lotto.net/?v=", "").replace(/a|b|c|d|e|f|g|h|i|j|k|l|n|o|p|q|r|s|t|u|v|w|x|y|z/gi, "m");
                     var qs = replaceText
                     var round = 0;
                     var lotto_number = [];
