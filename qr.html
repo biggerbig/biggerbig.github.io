@@ -49,7 +49,7 @@
             line-height: 26px;
         }
     </style>
-    <link href="/css/base.css?v=8" rel="stylesheet" type="text/css" />
+    <link href="/css/base.css?v=9" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript">
         $(window).load(function () {
@@ -145,7 +145,11 @@
                     <!-- <a onclick="history.back();">확인</a> -->
                 </div>
             </div>
-            <video id="preview"></video>
+            <div class="camera_wrap">
+                <p>QR코드를 인식시켜 주세요.</p>
+                <div class="focus">&#xeb0c;</div>
+                <video id="preview"></video>
+            </div>
             <script type="text/javascript">
                 let scanner = new Instascan.Scanner({
                     video: document.getElementById('preview'),
