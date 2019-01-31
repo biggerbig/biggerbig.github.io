@@ -132,19 +132,20 @@
     </div>
     <div id="content">
         <div class="container">
-
+            <p id="url"></p>
             <video id="preview"></video>
             <script type="text/javascript">
                 let scanner = new Instascan.Scanner({
                     video: document.getElementById('preview')
                 });
                 scanner.addListener('scan', function (content) {
-                    alert('Do you want to open this page?: ' + content);
-                    window.open(content, "_blank");
+                    var html = '';
+                    html += content;
+                    document.getElementById('url').innerHTML = html;
                 });
                 Instascan.Camera.getCameras().then(cameras => {
                     if (cameras.length > 0) {
-                        scanner.start(cameras[0]);
+                        scanner.start(cameras[1]);
                     } else {
                         console.error("Please enable Camera!");
                     }
