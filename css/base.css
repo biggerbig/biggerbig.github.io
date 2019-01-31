@@ -2302,13 +2302,14 @@ input[class=qr_item_check]:checked+label::after {
 
 video{
     width: 100%;
-    height: calc(100vh - 100px);
+    height: 100%;
     overflow: hidden;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
     position: fixed;
-    top: 50px;
+    top: 0px;
     left: 0;
+    z-index: 1;
 }
 
 #url {
