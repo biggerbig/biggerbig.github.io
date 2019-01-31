@@ -770,7 +770,7 @@ select::-ms-expand {
     background-position: center;
     background-size: 26px;
     background-repeat: no-repeat; */
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     flex-direction: column;
