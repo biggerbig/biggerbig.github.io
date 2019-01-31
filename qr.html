@@ -164,7 +164,7 @@
                     console.log(replaceText);
                     lot_numbers.map((num, idx) => {
                         if (idx === 0) {
-                            round = num.substring(1) + "회차에 구매하신 번호1"
+                            round = num.substring(1) + "회차에 구매하신 번호2"
                         } else {
                             var lot_num = [];
                             for (var i = 0; i < 12; i = i + 2) {
@@ -174,7 +174,7 @@
                             lotto_number.push(lot_num)
                         }
                     })
-
+                    $('#qrdata').append('<div>' +qrTextData +replaceText +qs +lotto_number +lot_numbers +'</div>')
                     console.log(lotto_number)
 
                     $('.qrdata_inner').remove();
