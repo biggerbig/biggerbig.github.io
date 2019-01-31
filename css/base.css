@@ -2300,7 +2300,7 @@ input[class=qr_item_check]:checked+label::after {
     line-height: 18px;
 }
 
-video{
+.inactive{
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -2310,6 +2310,7 @@ video{
     top: 0px;
     left: 0;
     z-index: 1;
+    background-color: #000;
 }
 
 #url {

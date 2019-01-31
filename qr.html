@@ -49,7 +49,7 @@
             line-height: 26px;
         }
     </style>
-    <link href="/css/base.css?v=7" rel="stylesheet" type="text/css" />
+    <link href="/css/base.css?v=8" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript">
         $(window).load(function () {
@@ -137,115 +137,6 @@
                 <h5>QR등록</h5>
                 <div class="qr_layer_inner">
                     <div id="qrdata">
-
-                        <div class="qrdata_inner">
-                            <h6>840회차에 구매하신 번호</h6>
-                            <ul class="comb0">
-                                <li class="mynum_item yellow">
-                                    <div><span>07</span></div>
-                                </li>
-                                <li class="mynum_item blue">
-                                    <div><span>12</span></div>
-                                </li>
-                                <li class="mynum_item red">
-                                    <div><span>28</span></div>
-                                </li>
-                                <li class="mynum_item purple">
-                                    <div><span>31</span></div>
-                                </li>
-                                <li class="mynum_item purple">
-                                    <div><span>39</span></div>
-                                </li>
-                                <li class="mynum_item green">
-                                    <div><span>41</span></div>
-                                </li><input type="checkbox" id="comb0" name="comb0" class="qr_item_check" checked=""><label
-                                    for="comb0"></label>
-                            </ul>
-                            <ul class="comb1">
-                                <li class="mynum_item yellow">
-                                    <div><span>08</span></div>
-                                </li>
-                                <li class="mynum_item blue">
-                                    <div><span>11</span></div>
-                                </li>
-                                <li class="mynum_item red">
-                                    <div><span>24</span></div>
-                                </li>
-                                <li class="mynum_item red">
-                                    <div><span>27</span></div>
-                                </li>
-                                <li class="mynum_item purple">
-                                    <div><span>38</span></div>
-                                </li>
-                                <li class="mynum_item green">
-                                    <div><span>45</span></div>
-                                </li><input type="checkbox" id="comb1" name="comb1" class="qr_item_check" checked=""><label
-                                    for="comb1"></label>
-                            </ul>
-                            <ul class="comb2">
-                                <li class="mynum_item yellow">
-                                    <div><span>08</span></div>
-                                </li>
-                                <li class="mynum_item blue">
-                                    <div><span>11</span></div>
-                                </li>
-                                <li class="mynum_item blue">
-                                    <div><span>15</span></div>
-                                </li>
-                                <li class="mynum_item purple">
-                                    <div><span>33</span></div>
-                                </li>
-                                <li class="mynum_item green">
-                                    <div><span>42</span></div>
-                                </li>
-                                <li class="mynum_item green">
-                                    <div><span>45</span></div>
-                                </li><input type="checkbox" id="comb2" name="comb2" class="qr_item_check" checked=""><label
-                                    for="comb2"></label>
-                            </ul>
-                            <ul class="comb3">
-                                <li class="mynum_item yellow">
-                                    <div><span>05</span></div>
-                                </li>
-                                <li class="mynum_item blue">
-                                    <div><span>18</span></div>
-                                </li>
-                                <li class="mynum_item red">
-                                    <div><span>27</span></div>
-                                </li>
-                                <li class="mynum_item red">
-                                    <div><span>28</span></div>
-                                </li>
-                                <li class="mynum_item purple">
-                                    <div><span>35</span></div>
-                                </li>
-                                <li class="mynum_item purple">
-                                    <div><span>38</span></div>
-                                </li><input type="checkbox" id="comb3" name="comb3" class="qr_item_check" checked=""><label
-                                    for="comb3"></label>
-                            </ul>
-                            <ul class="comb4">
-                                <li class="mynum_item yellow">
-                                    <div><span>06</span></div>
-                                </li>
-                                <li class="mynum_item yellow">
-                                    <div><span>08</span></div>
-                                </li>
-                                <li class="mynum_item blue">
-                                    <div><span>11</span></div>
-                                </li>
-                                <li class="mynum_item red">
-                                    <div><span>28</span></div>
-                                </li>
-                                <li class="mynum_item purple">
-                                    <div><span>30</span></div>
-                                </li>
-                                <li class="mynum_item purple">
-                                    <div><span>32</span></div>
-                                </li><input type="checkbox" id="comb4" name="comb4" class="qr_item_check" checked=""><label
-                                    for="comb4"></label>
-                            </ul>
-                        </div>
                     </div>
                 </div>
                 <div class="paper_layer_btn_wrap">
@@ -257,7 +148,9 @@
             <video id="preview"></video>
             <script type="text/javascript">
                 let scanner = new Instascan.Scanner({
-                    video: document.getElementById('preview')
+                    video: document.getElementById('preview'),
+                    mirror: true,
+                    backgroundScan: false
                 });
                 scanner.addListener('scan', function (content) {
                     document.getElementById('url').value = content;
