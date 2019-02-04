@@ -28,12 +28,19 @@
     "manage": {},
     "picker": {},
     "prize": {},
+    "qr.html": {
+      "type": "-",
+      "size": 6743,
+      "lmtime": 0,
+      "modified": false
+    },
     "template": {
       "type": "-",
       "size": 329,
       "lmtime": 0,
       "modified": false
-    }
+    },
+    "user": {}
   },
   "$version": 1
 }
